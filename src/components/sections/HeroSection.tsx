@@ -1,17 +1,22 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
 import { PixelButton } from '../pixel';
-import { PixelHeroCanvas } from '../canvas';
+
+// Dynamic import canvas to avoid SSR
+const PixelHeroCanvas = dynamic(
+  () => import('../canvas/PixelHeroCanvas'),
+  { ssr: false }
+);
 
 export default function HeroSection() {
-  const [mounted, setMounted] = useState(false);
   const [displayText, setDisplayText] = useState('');
   const [isTypingDone, setIsTypingDone] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const fullText = 'Designing systems people can trust.';
   const typingSpeed = 80;
 
-  // Handle hydration
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -52,17 +57,11 @@ export default function HeroSection() {
               className="font-[family-name:var(--font-display)] text-[length:var(--text-3xl)] font-medium text-text-primary leading-tight min-h-[1.2em]"
               data-en="Designing systems people can trust."
               data-zh="设计值得信赖的系统。"
+              suppressHydrationWarning
             >
-              {mounted ? (
-                <>
-                  {displayText}
-                  {!isTypingDone && (
-                    <span className="text-red-primary blink-cursor">█</span>
-                  )}
-                </>
-              ) : (
-                // Static content for SSR
-                <span className="opacity-0">{fullText}</span>
+              {mounted ? displayText : fullText}
+              {mounted && !isTypingDone && (
+                <span className="text-red-primary blink-cursor">█</span>
               )}
             </h1>
 
@@ -112,8 +111,8 @@ export default function HeroSection() {
                 <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-red-primary z-10" />
                 <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-red-primary z-10" />
 
-                {/* Animated Canvas */}
-                {mounted && <PixelHeroCanvas />}
+                {/* Animated Canvas - client only */}
+                <PixelHeroCanvas />
               </div>
             </div>
           </div>

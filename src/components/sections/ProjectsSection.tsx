@@ -1,7 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { ProjectVisual } from '../canvas';
+import dynamic from 'next/dynamic';
+
+// Dynamic import canvas to avoid SSR
+const ProjectVisual = dynamic(
+  () => import('../canvas/ProjectVisual'),
+  { ssr: false }
+);
 
 interface Project {
   id: string;
