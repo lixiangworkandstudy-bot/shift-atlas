@@ -40,23 +40,8 @@ export default function LanguageToggle({ className }: LanguageToggleProps) {
     });
   };
 
-  // Render placeholder during SSR to avoid hydration mismatch
-  if (!mounted) {
-    return (
-      <div
-        className={clsx(
-          'flex items-center gap-1',
-          'font-[family-name:var(--font-pixel)]',
-          'text-[8px]',
-          className
-        )}
-      >
-        <span className="px-2 py-1 border border-line-pixel bg-red-primary text-bg-primary">EN</span>
-        <span className="text-text-tertiary">|</span>
-        <span className="px-2 py-1 border border-line-pixel text-text-tertiary">中文</span>
-      </div>
-    );
-  }
+  // Use same structure for SSR and client to avoid hydration mismatch
+  const currentLang = mounted ? lang : 'en';
 
   return (
     <div
@@ -68,33 +53,33 @@ export default function LanguageToggle({ className }: LanguageToggleProps) {
       )}
     >
       <button
-        onClick={() => switchLanguage('en')}
+        onClick={() => mounted && switchLanguage('en')}
         className={clsx(
           'px-2 py-1',
           'border border-line-pixel',
           'transition-all duration-[var(--duration-fast)]',
-          lang === 'en'
+          currentLang === 'en'
             ? 'bg-red-primary text-bg-primary border-red-primary'
             : 'bg-transparent text-text-tertiary hover:text-red-bright hover:border-red-bright'
         )}
         aria-label="Switch to English"
-        aria-pressed={lang === 'en'}
+        aria-pressed={currentLang === 'en'}
       >
         EN
       </button>
       <span className="text-text-tertiary">|</span>
       <button
-        onClick={() => switchLanguage('zh')}
+        onClick={() => mounted && switchLanguage('zh')}
         className={clsx(
           'px-2 py-1',
           'border border-line-pixel',
           'transition-all duration-[var(--duration-fast)]',
-          lang === 'zh'
+          currentLang === 'zh'
             ? 'bg-red-primary text-bg-primary border-red-primary'
             : 'bg-transparent text-text-tertiary hover:text-red-bright hover:border-red-bright'
         )}
         aria-label="切换到中文"
-        aria-pressed={lang === 'zh'}
+        aria-pressed={currentLang === 'zh'}
       >
         中文
       </button>
