@@ -1,7 +1,8 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { PixelButton } from '../pixel';
+import { PixelHeroCanvas } from '../canvas';
 
 export default function HeroSection() {
   const [displayText, setDisplayText] = useState('');
@@ -84,38 +85,19 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right: Visual Canvas */}
+          {/* Right: Animated Visual Canvas */}
           <div className="flex justify-center lg:justify-end">
-            <div className="relative w-80 h-80 lg:w-96 lg:h-96">
-              {/* Pixel Art Placeholder */}
-              <div className="w-full h-full bg-bg-secondary border-2 border-line-pixel relative overflow-hidden">
+            <div className="relative w-80 h-80 lg:w-[400px] lg:h-[400px]">
+              {/* Canvas Container with pixel border */}
+              <div className="w-full h-full bg-bg-terminal border-2 border-line-pixel relative overflow-hidden shadow-[8px_8px_0_0_rgba(0,0,0,0.4)]">
                 {/* Corner decorations */}
-                <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-red-primary" />
-                <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-red-primary" />
-                <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-red-primary" />
-                <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-red-primary" />
+                <div className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2 border-red-primary z-10" />
+                <div className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2 border-red-primary z-10" />
+                <div className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2 border-red-primary z-10" />
+                <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-red-primary z-10" />
 
-                {/* Animated geometric pattern (placeholder) */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="relative">
-                    {/* Central symbol */}
-                    <div className="w-24 h-24 border-4 border-red-primary rotate-45 animate-[spin_30s_linear_infinite]" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-16 h-16 border-4 border-red-muted rotate-45 animate-[spin_20s_linear_infinite_reverse]" />
-                    </div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-8 h-8 bg-red-primary rotate-45" />
-                    </div>
-                  </div>
-                </div>
-
-                {/* Pixel dots decoration */}
-                <div className="absolute top-4 left-4 text-red-dim text-[8px] font-[family-name:var(--font-pixel)]">
-                  ◆ ◆ ◆
-                </div>
-                <div className="absolute bottom-4 right-4 text-red-dim text-[8px] font-[family-name:var(--font-pixel)]">
-                  ◆ ◆ ◆
-                </div>
+                {/* Animated Canvas */}
+                <PixelHeroCanvas />
               </div>
             </div>
           </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { ProjectVisual } from '../canvas';
 
 interface Project {
   id: string;
@@ -11,6 +12,7 @@ interface Project {
   role: string;
   scope: string;
   impact: string;
+  seed: number;
 }
 
 const projects: Project[] = [
@@ -23,6 +25,7 @@ const projects: Project[] = [
     role: 'Product Design Lead',
     scope: 'UX Research • System Design',
     impact: '40% retention increase',
+    seed: 1,
   },
   {
     id: 'llm-evaluation',
@@ -33,6 +36,7 @@ const projects: Project[] = [
     role: 'UX Researcher',
     scope: 'System Design • Data Viz',
     impact: '30% faster evaluation',
+    seed: 2,
   },
   {
     id: 'educational-content',
@@ -43,6 +47,7 @@ const projects: Project[] = [
     role: 'Product Designer',
     scope: 'Content Design • UX',
     impact: '2M+ users engaged',
+    seed: 3,
   },
   {
     id: 'product-strategy',
@@ -53,6 +58,7 @@ const projects: Project[] = [
     role: 'Strategy Lead',
     scope: 'Brand • Content',
     impact: 'New market entry',
+    seed: 4,
   },
 ];
 
@@ -90,23 +96,28 @@ export default function ProjectsSection() {
           {projects.map((project) => (
             <article
               key={project.id}
-              className="bg-bg-secondary border-[3px] border-double border-red-primary relative group"
+              className="bg-bg-secondary border-[3px] border-double border-red-primary relative group transition-transform duration-300 hover:-translate-y-1"
               style={{
                 boxShadow: '8px 8px 0 0 rgba(0, 0, 0, 0.3)',
               }}
             >
-              {/* Project Preview Image Placeholder */}
-              <div className="aspect-video bg-bg-terminal flex items-center justify-center border-b-2 border-line-pixel relative overflow-hidden">
-                {/* Placeholder visual */}
-                <div className="text-center">
-                  <div className="text-red-muted font-[family-name:var(--font-pixel)] text-[10px] mb-2">
-                    PROJECT_{project.id.toUpperCase().replace('-', '_')}
-                  </div>
-                  <div className="w-16 h-16 border-2 border-red-dim mx-auto rotate-45 opacity-50" />
+              {/* Project Preview - Animated Canvas */}
+              <div className="aspect-video bg-bg-terminal border-b-2 border-line-pixel relative overflow-hidden">
+                {/* Animated Visual */}
+                <ProjectVisual seed={project.seed} />
+
+                {/* Project ID Overlay */}
+                <div className="absolute top-3 left-3 bg-bg-terminal/80 px-2 py-1 border border-line-pixel">
+                  <span className="text-red-primary font-[family-name:var(--font-pixel)] text-[8px]">
+                    PROJECT_{String(project.seed).padStart(2, '0')}
+                  </span>
                 </div>
 
-                {/* Scanline effect on image */}
-                <div className="absolute inset-0 bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.1)_2px,rgba(0,0,0,0.1)_4px)] pointer-events-none" />
+                {/* Scanline effect overlay */}
+                <div className="absolute inset-0 bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.05)_2px,rgba(0,0,0,0.05)_4px)] pointer-events-none" />
+
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-red-primary/0 group-hover:bg-red-primary/10 transition-colors duration-300 pointer-events-none" />
               </div>
 
               {/* Content */}
