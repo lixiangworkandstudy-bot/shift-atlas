@@ -5,12 +5,21 @@ import { PixelButton } from '../pixel';
 import { PixelHeroCanvas } from '../canvas';
 
 export default function HeroSection() {
+  const [mounted, setMounted] = useState(false);
   const [displayText, setDisplayText] = useState('');
   const [isTypingDone, setIsTypingDone] = useState(false);
   const fullText = 'Designing systems people can trust.';
   const typingSpeed = 80;
 
+  // Handle hydration
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Typewriter effect
+  useEffect(() => {
+    if (!mounted) return;
+
     let currentIndex = 0;
     const interval = setInterval(() => {
       if (currentIndex <= fullText.length) {
@@ -23,7 +32,7 @@ export default function HeroSection() {
     }, typingSpeed);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [mounted]);
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -40,13 +49,20 @@ export default function HeroSection() {
           <div className="space-y-6">
             {/* Title with Typewriter Effect */}
             <h1
-              className="font-[family-name:var(--font-display)] text-[length:var(--text-3xl)] font-medium text-text-primary leading-tight"
+              className="font-[family-name:var(--font-display)] text-[length:var(--text-3xl)] font-medium text-text-primary leading-tight min-h-[1.2em]"
               data-en="Designing systems people can trust."
               data-zh="设计值得信赖的系统。"
             >
-              {displayText}
-              {!isTypingDone && (
-                <span className="text-red-primary blink-cursor">█</span>
+              {mounted ? (
+                <>
+                  {displayText}
+                  {!isTypingDone && (
+                    <span className="text-red-primary blink-cursor">█</span>
+                  )}
+                </>
+              ) : (
+                // Static content for SSR
+                <span className="opacity-0">{fullText}</span>
               )}
             </h1>
 
@@ -97,7 +113,7 @@ export default function HeroSection() {
                 <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-red-primary z-10" />
 
                 {/* Animated Canvas */}
-                <PixelHeroCanvas />
+                {mounted && <PixelHeroCanvas />}
               </div>
             </div>
           </div>
