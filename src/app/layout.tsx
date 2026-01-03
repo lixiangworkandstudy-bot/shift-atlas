@@ -71,7 +71,6 @@ export default function RootLayout({
           ${pressStart2P.variable}
           ${shareTechMono.variable}
           antialiased
-          crt-screen
         `}
       >
         {children}

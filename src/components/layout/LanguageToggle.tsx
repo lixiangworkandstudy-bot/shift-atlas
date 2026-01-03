@@ -1,7 +1,20 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, createContext, useContext } from 'react';
 import clsx from 'clsx';
+
+// Create language context
+export const LanguageContext = createContext<{
+  lang: 'en' | 'zh';
+  setLang: (lang: 'en' | 'zh') => void;
+}>({
+  lang: 'en',
+  setLang: () => {},
+});
+
+export function useLanguage() {
+  return useContext(LanguageContext);
+}
 
 interface LanguageToggleProps {
   className?: string;
@@ -18,7 +31,6 @@ export default function LanguageToggle({ className }: LanguageToggleProps) {
     if (saved) {
       setLang(saved);
       document.documentElement.lang = saved;
-      updateContent(saved);
     }
   }, []);
 
@@ -26,21 +38,9 @@ export default function LanguageToggle({ className }: LanguageToggleProps) {
     setLang(newLang);
     localStorage.setItem('preferred-language', newLang);
     document.documentElement.lang = newLang;
-    updateContent(newLang);
+    // Note: Removed direct DOM manipulation - will use React state in future
   };
 
-  const updateContent = (targetLang: 'en' | 'zh') => {
-    // Update all bilingual elements
-    document.querySelectorAll('[data-en][data-zh]').forEach((el) => {
-      const element = el as HTMLElement;
-      const text = targetLang === 'en' ? element.dataset.en : element.dataset.zh;
-      if (text) {
-        element.textContent = text;
-      }
-    });
-  };
-
-  // Use same structure for SSR and client to avoid hydration mismatch
   const currentLang = mounted ? lang : 'en';
 
   return (
