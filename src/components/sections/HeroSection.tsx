@@ -12,31 +12,63 @@ const PixelHeroCanvas = dynamic(
 
 export default function HeroSection() {
   const [displayText, setDisplayText] = useState('');
-  const [isTypingDone, setIsTypingDone] = useState(false);
+  const [showCursor, setShowCursor] = useState(true);
   const [mounted, setMounted] = useState(false);
   const fullText = 'Designing systems people can trust.';
   const typingSpeed = 80;
+  const deletingSpeed = 50;
+  const pauseDuration = 3000;
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // Typewriter effect
+  // Looping Typewriter Effect
   useEffect(() => {
     if (!mounted) return;
 
     let currentIndex = 0;
-    const interval = setInterval(() => {
-      if (currentIndex <= fullText.length) {
-        setDisplayText(fullText.slice(0, currentIndex));
-        currentIndex++;
-      } else {
-        clearInterval(interval);
-        setIsTypingDone(true);
-      }
-    }, typingSpeed);
+    let isDeleting = false;
+    let isPaused = false;
+    let timeoutId: NodeJS.Timeout;
 
-    return () => clearInterval(interval);
+    const type = () => {
+      // Typing phase
+      if (!isDeleting && !isPaused) {
+        if (currentIndex <= fullText.length) {
+          setDisplayText(fullText.slice(0, currentIndex));
+          currentIndex++;
+          timeoutId = setTimeout(type, typingSpeed);
+        } else {
+          // Finished typing, pause before deleting
+          isPaused = true;
+          setShowCursor(true);
+          timeoutId = setTimeout(() => {
+            isPaused = false;
+            isDeleting = true;
+            type();
+          }, pauseDuration);
+        }
+      }
+      // Deleting phase
+      else if (isDeleting && !isPaused) {
+        if (currentIndex > 0) {
+          currentIndex--;
+          setDisplayText(fullText.slice(0, currentIndex));
+          timeoutId = setTimeout(type, deletingSpeed);
+        } else {
+          // Finished deleting, start typing again
+          isDeleting = false;
+          timeoutId = setTimeout(type, 500);
+        }
+      }
+    };
+
+    type();
+
+    return () => {
+      if (timeoutId) clearTimeout(timeoutId);
+    };
   }, [mounted]);
 
   const scrollToSection = (id: string) => {
@@ -52,7 +84,7 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left: Text Content */}
           <div className="space-y-6">
-            {/* Title with Typewriter Effect */}
+            {/* Title with Looping Typewriter Effect */}
             <h1
               className="font-[family-name:var(--font-display)] text-[length:var(--text-3xl)] font-medium text-text-primary leading-tight min-h-[1.2em]"
               data-en="Designing systems people can trust."
@@ -60,7 +92,7 @@ export default function HeroSection() {
               suppressHydrationWarning
             >
               {mounted ? displayText : fullText}
-              {mounted && !isTypingDone && (
+              {mounted && showCursor && (
                 <span className="text-red-primary blink-cursor">█</span>
               )}
             </h1>
