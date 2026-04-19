@@ -1,7 +1,4 @@
-'use client';
-
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
 import { PixelButton } from '@/components/pixel';
 
 interface Signal {
@@ -92,9 +89,16 @@ const signals: Record<string, Signal> = {
   },
 };
 
-export default function SignalPage() {
-  const params = useParams();
-  const slug = params.slug as string;
+export function generateStaticParams() {
+  return Object.keys(signals).map((slug) => ({ slug }));
+}
+
+export default async function SignalPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
   const signal = signals[slug];
 
   if (!signal) {

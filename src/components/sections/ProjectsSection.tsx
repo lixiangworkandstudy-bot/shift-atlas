@@ -66,6 +66,17 @@ const projects: Project[] = [
     impact: 'New market entry',
     seed: 4,
   },
+  {
+    id: 'shift-atlas',
+    title_en: 'Shift Atlas',
+    title_zh: 'Shift Atlas 认知网站',
+    description_en: 'A design intelligence archive for AI-era systems and human-AI relationships',
+    description_zh: '一个面向 AI 时代系统设计与人机关系的设计情报档案',
+    role: 'Independent Builder',
+    scope: 'Knowledge System • Design Intelligence • Web',
+    impact: 'New project in progress',
+    seed: 5,
+  },
 ];
 
 export default function ProjectsSection() {
@@ -78,7 +89,7 @@ export default function ProjectsSection() {
             007
           </span>
           <span className="text-text-tertiary font-[family-name:var(--font-pixel)] text-[16px]">
-            //
+            {'//'}
           </span>
           <h2
             className="font-[family-name:var(--font-pixel)] text-[16px] text-text-primary tracking-wider"

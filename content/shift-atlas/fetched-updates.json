@@ -1,0 +1,974 @@
+{
+  "generatedAt": "2026-04-16T11:22:29.038Z",
+  "itemCount": 42,
+  "sourceCount": 7,
+  "errors": [],
+  "items": [
+    {
+      "sourceId": "simon-willison",
+      "sourceName": "Simon Willison",
+      "title": "datasette.io news preview",
+      "summary": "Tool: datasette.io news preview The datasette.io website has a news section built from this news.yaml file in the underlying GitHub repository. The YAML format looks like this: - date: 2026-04-15 body: |- [Datasette 1.0a27](https://docs.datasette.io/en/latest/changelog.html#a27-2026-04-15) changes how CSRF protection works in a way that simplifies form and API integration, and introduces a new `RenameTableEvent` for when a table is renamed by a SQL query. - date: 2026-03-18 body: |- ... This format is a little hard to edit, so I finally had Claude build a custom preview UI to make checking for errors have slightly less friction. I built it using standard claude.ai and Claude Artifacts, taking advantage of Claude's ability to clone GitHub repos and look at their content as part of a regular chat: Clone https://github.com/simonw/datasette.io and look at the news.yaml file and how it is rendered on the homepage. Build an artifact I can paste that YAML into which previews what it will look like, and highlights any markdown errors or YAML errors Tags: vibe-coding , claude , tools , datasette",
+      "extracted": {
+        "digest": "datasette.io news preview The datasette.io website has a news section built from this news.yaml file in the underlying GitHub repository. The YAML fo… datasette.io news preview The datasette.io website has a news section built from this news.yaml file in the…",
+        "digestZh": "主要观点：这条更新值得关注，因为它可能改写相关领域的产品判断。 核心内容：datasette.io news preview The datasette.io website has a news section built from this news.yaml file in the underlying GitHub repository. The YAML format looks like this: - date: 2026-04-15 body: |- Datasette 1.0a27 cha…",
+        "mainPoint": "datasette.io news preview The datasette.io website has a news section built from this news.yaml file in the underlying GitHub repository. The YAML fo…",
+        "mainPointZh": "datasette.io news preview The datasette.io website has a news section built from this news.yaml file in the underlying GitHub repository. The YAML fo…",
+        "coreContent": "datasette.io news preview The datasette.io website has a news section built from this news.yaml file in the underlying GitHub repository. The YAML format looks like this: - date: 2026-04-15 body: |- Datasette 1.0a27 cha…",
+        "coreContentZh": "datasette.io news preview The datasette.io website has a news section built from this news.yaml file in the underlying GitHub repository. The YAML format looks like this: - date: 2026-04-15 body: |- Datasette 1.0a27 cha…"
+      },
+      "link": "https://simonwillison.net/2026/Apr/16/datasette-io-preview/#atom-everything",
+      "publishedAt": "2026-04-16T00:18:03.000Z",
+      "authority": "personal",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "secondary",
+        "score": 2
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI Newsroom",
+      "title": "Accelerating the cyber defense ecosystem that protects us all",
+      "summary": "Leading security firms and enterprises join OpenAI’s Trusted Access for Cyber, using GPT-5.4-Cyber and $10M in API grants to strengthen global cyber defense.",
+      "extracted": {
+        "digest": "Leading security firms and enterprises join OpenAI’s Trusted Access for Cyber, using GPT-5.4-Cyber and $10M in API grants to strengthen global cyber… Leading security firms and enterprises join OpenAI’s Trusted Access for Cyber, using GPT-5.4-Cyber and $10M i…",
+        "digestZh": "主要观点：这条更新在说明信任、权限和风险展示正在变成产品前台问题。 核心内容：Leading security firms and enterprises join OpenAI’s Trusted Access for Cyber, using GPT-5.4-Cyber and $10M in API grants to strengthen global cyber defense.",
+        "mainPoint": "Leading security firms and enterprises join OpenAI’s Trusted Access for Cyber, using GPT-5.4-Cyber and $10M in API grants to strengthen global cyber…",
+        "mainPointZh": "Leading security firms and enterprises join OpenAI’s Trusted Access for Cyber, using GPT-5.4-Cyber and $10M in API grants to strengthen global cyber…",
+        "coreContent": "Leading security firms and enterprises join OpenAI’s Trusted Access for Cyber, using GPT-5.4-Cyber and $10M in API grants to strengthen global cyber defense.",
+        "coreContentZh": "Leading security firms and enterprises join OpenAI’s Trusted Access for Cyber, using GPT-5.4-Cyber and $10M in API grants to strengthen global cyber defense."
+      },
+      "link": "https://openai.com/index/accelerating-cyber-defense-ecosystem",
+      "publishedAt": "2026-04-16T00:00:00.000Z",
+      "authority": "official",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "simon-willison",
+      "sourceName": "Simon Willison",
+      "title": "datasette-export-database 0.3a1",
+      "summary": "Release: datasette-export-database 0.3a1 This plugin was using the ds_csrftoken cookie as part of a custom signed URL, which needed upgrading now that Datasette 1.0a27 no longer sets that cookie . Tags: datasette",
+      "extracted": {
+        "digest": "datasette-export-database 0.3a1 This plugin was using the ds_csrftoken cookie as part of a custom signed URL, which needed upgrading now that Dataset… datasette-export-database 0.3a1 This plugin was using the ds_csrftoken cookie as part of a custom signed URL…",
+        "digestZh": "主要观点：这条更新值得关注，因为它可能改写相关领域的产品判断。 核心内容：datasette-export-database 0.3a1 This plugin was using the ds_csrftoken cookie as part of a custom signed URL, which needed upgrading now that Datasette 1.0a27 no longer sets that cookie .",
+        "mainPoint": "datasette-export-database 0.3a1 This plugin was using the ds_csrftoken cookie as part of a custom signed URL, which needed upgrading now that Dataset…",
+        "mainPointZh": "datasette-export-database 0.3a1 This plugin was using the ds_csrftoken cookie as part of a custom signed URL, which needed upgrading now that Dataset…",
+        "coreContent": "datasette-export-database 0.3a1 This plugin was using the ds_csrftoken cookie as part of a custom signed URL, which needed upgrading now that Datasette 1.0a27 no longer sets that cookie .",
+        "coreContentZh": "datasette-export-database 0.3a1 This plugin was using the ds_csrftoken cookie as part of a custom signed URL, which needed upgrading now that Datasette 1.0a27 no longer sets that cookie ."
+      },
+      "link": "https://simonwillison.net/2026/Apr/15/datasette-export-database/#atom-everything",
+      "publishedAt": "2026-04-15T23:52:35.000Z",
+      "authority": "personal",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "secondary",
+        "score": 2
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "simon-willison",
+      "sourceName": "Simon Willison",
+      "title": "datasette 1.0a27",
+      "summary": "Release: datasette 1.0a27 Two major changes in this new Datasette alpha. I covered the first of those in detail yesterday - Datasette no longer uses Django-style CSRF form tokens, instead using modern browser headers as described by Filippo Valsorda . The second big change is that Datasette now fires a new RenameTableEvent any time a table is renamed during a SQLite transaction. This is useful because some plugins (like datasette-comments ) attach additional data to table records by name, so a renamed table requires them to react in appropriate ways. Here are the rest of the changes in the alpha: New actor= parameter for datasette.client methods, allowing internal requests to be made as a specific actor. This is particularly useful for writing automated tests. ( #2688 ) New Database(is_temp_disk=True) option, used internally for the internal database. This helps resolve intermittent database locked errors caused by the internal database being in-memory as opposed to on-disk. ( #2683 ) ( #2684 ) The / / /-/upsert API ( docs ) now rejects rows with null primary key values. ( #1936 ) Improved example in the API explorer for the /-/upsert endpoint ( docs ). ( #1936 ) The / .json endpoint now includes an \"ok\": true key, for consistency with other JSON API responses. call_with_supported_arguments() is now documented as a supported public API. ( #2678 ) Tags: annotated-release-notes , datasette , python",
+      "extracted": {
+        "digest": "I covered the first of those in detail yesterday - Datasette no longer uses Django-style CSRF form tokens, instead using modern browser headers as de… datasette 1.0a27 Two major changes in this new Datasette alpha.",
+        "digestZh": "主要观点：这条更新在提醒产品团队重新判断什么该被记住、什么该被延续。 核心内容：datasette 1.0a27 Two major changes in this new Datasette alpha.",
+        "mainPoint": "I covered the first of those in detail yesterday - Datasette no longer uses Django-style CSRF form tokens, instead using modern browser headers as de…",
+        "mainPointZh": "I covered the first of those in detail yesterday - Datasette no longer uses Django-style CSRF form tokens, instead using modern browser headers as de…",
+        "coreContent": "datasette 1.0a27 Two major changes in this new Datasette alpha.",
+        "coreContentZh": "datasette 1.0a27 Two major changes in this new Datasette alpha."
+      },
+      "link": "https://simonwillison.net/2026/Apr/15/datasette/#atom-everything",
+      "publishedAt": "2026-04-15T23:16:34.000Z",
+      "authority": "personal",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "secondary",
+        "score": 2
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "the-verge-ai",
+      "sourceName": "The Verge AI",
+      "title": "Allbirds announced a switch from shoes to AI and its stock jumped 600 percent",
+      "summary": "Allbirds had a hit a decade ago with its Wool Runner shoes, but after a $4 billion IPO in 2021, the business never turned a profit, and sales dropped nearly 50 percent between 2022 and 2025. The company recently announced it would sell off its name and assets for $39 million to American Exchange after […]",
+      "extracted": {
+        "digest": "The company recently announced it would sell off its name and assets for $39 million to American Exchange after […] Allbirds had a hit a decade ago with its Wool Runner shoes, but after a $4 billion IPO in 2021, the business never turned a profit, and sales d…",
+        "digestZh": "主要观点：这条更新值得关注，因为它可能改写相关领域的产品判断。 核心内容：Allbirds had a hit a decade ago with its Wool Runner shoes, but after a $4 billion IPO in 2021, the business never turned a profit, and sales dropped nearly 50 percent between 2022 and 2025.",
+        "mainPoint": "The company recently announced it would sell off its name and assets for $39 million to American Exchange after […]",
+        "mainPointZh": "The company recently announced it would sell off its name and assets for $39 million to American Exchange after […]",
+        "coreContent": "Allbirds had a hit a decade ago with its Wool Runner shoes, but after a $4 billion IPO in 2021, the business never turned a profit, and sales dropped nearly 50 percent between 2022 and 2025.",
+        "coreContentZh": "Allbirds had a hit a decade ago with its Wool Runner shoes, but after a $4 billion IPO in 2021, the business never turned a profit, and sales dropped nearly 50 percent between 2022 and 2025."
+      },
+      "link": "https://www.theverge.com/news/912484/allbirds-ai-hyperscale",
+      "publishedAt": "2026-04-15T20:22:25.000Z",
+      "authority": "media",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "watch",
+        "score": 1
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "the-verge-ai",
+      "sourceName": "The Verge AI",
+      "title": "Trump’s posting even more AI-generated Trump-Jesus fan art",
+      "summary": "Hello and welcome to Regulator, a newsletter for Verge subscribers about Big Tech power plays in Washington and beyond. (And when I say beyond, I mean the great beyond, like Heaven, maybe.) If you've found your way to this newsletter from the wild, annual subscriptions are currently 50 percent off. That's $30 a year for […]",
+      "extracted": {
+        "digest": "Hello and welcome to Regulator, a newsletter for Verge subscribers about Big Tech power plays in Washington and beyond. (And when I say beyond, I mea… Hello and welcome to Regulator, a newsletter for Verge subscribers about Big Tech power plays in Washington…",
+        "digestZh": "主要观点：这条更新值得关注，因为它可能改写相关领域的产品判断。 核心内容：Hello and welcome to Regulator, a newsletter for Verge subscribers about Big Tech power plays in Washington and beyond. (And when I say beyond, I mean the great beyond, like Heaven, maybe.) If you've found your way to t…",
+        "mainPoint": "Hello and welcome to Regulator, a newsletter for Verge subscribers about Big Tech power plays in Washington and beyond. (And when I say beyond, I mea…",
+        "mainPointZh": "Hello and welcome to Regulator, a newsletter for Verge subscribers about Big Tech power plays in Washington and beyond. (And when I say beyond, I mea…",
+        "coreContent": "Hello and welcome to Regulator, a newsletter for Verge subscribers about Big Tech power plays in Washington and beyond. (And when I say beyond, I mean the great beyond, like Heaven, maybe.) If you've found your way to t…",
+        "coreContentZh": "Hello and welcome to Regulator, a newsletter for Verge subscribers about Big Tech power plays in Washington and beyond. (And when I say beyond, I mean the great beyond, like Heaven, maybe.) If you've found your way to t…"
+      },
+      "link": "https://www.theverge.com/column/912627/trump-jesus-ai-whcd-penguin-meme",
+      "publishedAt": "2026-04-15T20:03:05.000Z",
+      "authority": "media",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "watch",
+        "score": 1
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "the-verge-ai",
+      "sourceName": "The Verge AI",
+      "title": "Google launches a Gemini AI app on Mac",
+      "summary": "Google is launching a new Gemini app on Mac that allows you to interact with the AI assistant without switching windows on your desktop. With the app, you can use the Option + Space shortcut to pull up a floating chat bubble, where you can ask Gemini questions and share your window. Before sharing your […]",
+      "extracted": {
+        "digest": "Google is launching a new Gemini app on Mac that allows you to interact with the AI assistant without switching windows on your desktop. With the app, you can use the Option + Space shortcut to pull up a floating chat bubble, where you can ask Gemini question…",
+        "digestZh": "主要观点：这条更新值得关注，因为它可能改写相关领域的产品判断。 核心内容：With the app, you can use the Option + Space shortcut to pull up a floating chat bubble, where you can ask Gemini questions and share your window.",
+        "mainPoint": "Google is launching a new Gemini app on Mac that allows you to interact with the AI assistant without switching windows on your desktop.",
+        "mainPointZh": "Google is launching a new Gemini app on Mac that allows you to interact with the AI assistant without switching windows on your desktop.",
+        "coreContent": "With the app, you can use the Option + Space shortcut to pull up a floating chat bubble, where you can ask Gemini questions and share your window.",
+        "coreContentZh": "With the app, you can use the Option + Space shortcut to pull up a floating chat bubble, where you can ask Gemini questions and share your window."
+      },
+      "link": "https://www.theverge.com/tech/912638/google-gemini-mac-app",
+      "publishedAt": "2026-04-15T18:10:15.000Z",
+      "authority": "media",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "watch",
+        "score": 1
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "simon-willison",
+      "sourceName": "Simon Willison",
+      "title": "Quoting John Gruber",
+      "summary": "The real goldmine isn’t that Apple gets a cut of every App Store transaction. It’s that Apple’s platforms have the best apps, and users who are drawn to the best apps are thus drawn to the iPhone, Mac, and iPad. That edge is waning. Not because software on other platforms is getting better, but because third-party software on iPhone, Mac, and iPad is regressing to the mean, to some extent , because fewer developers feel motivated — artistically, financially, or both — to create well-crafted idiomatic native apps exclusively for Apple’s platforms. &mdash; John Gruber Tags: apple , john-gruber",
+      "extracted": {
+        "digest": "The real goldmine isn’t that Apple gets a cut of every App Store transaction. It’s that Apple’s platforms have the best apps, and users who are drawn to the best apps are thus drawn to the iPhone, Mac, and iPad.",
+        "digestZh": "主要观点：这条更新在说明 AI 交互正在从一次性操作走向更明确的界面和任务结构。 核心内容：It’s that Apple’s platforms have the best apps, and users who are drawn to the best apps are thus drawn to the iPhone, Mac, and iPad.",
+        "mainPoint": "The real goldmine isn’t that Apple gets a cut of every App Store transaction.",
+        "mainPointZh": "The real goldmine isn’t that Apple gets a cut of every App Store transaction.",
+        "coreContent": "It’s that Apple’s platforms have the best apps, and users who are drawn to the best apps are thus drawn to the iPhone, Mac, and iPad.",
+        "coreContentZh": "It’s that Apple’s platforms have the best apps, and users who are drawn to the best apps are thus drawn to the iPhone, Mac, and iPad."
+      },
+      "link": "https://simonwillison.net/2026/Apr/15/john-gruber/#atom-everything",
+      "publishedAt": "2026-04-15T17:13:57.000Z",
+      "authority": "personal",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "secondary",
+        "score": 2
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "simon-willison",
+      "sourceName": "Simon Willison",
+      "title": "Gemini 3.1 Flash TTS",
+      "summary": "Gemini 3.1 Flash TTS Google released Gemini 3.1 Flash TTS today, a new text-to-speech model that can be directed using prompts. It's presented via the standard Gemini API using gemini-3.1-flash-tts-preview as the model ID, but can only output audio files. The prompting guide is surprising, to say the least. Here's their example prompt to generate just a few short sentences of audio: # AUDIO PROFILE: Jaz R. ## \"The Morning Hype\" ## THE SCENE: The London Studio It is 10:00 PM in a glass-walled studio overlooking the moonlit London skyline, but inside, it is blindingly bright. The red \"ON AIR\" tally light is blazing. Jaz is standing up, not sitting, bouncing on the balls of their heels to the rhythm of a thumping backing track. Their hands fly across the faders on a massive mixing desk. It is a chaotic, caffeine-fueled cockpit designed to wake up an entire nation. ### DIRECTOR'S NOTES Style: * The \"Vocal Smile\": You must hear the grin in the audio. The soft palate is always raised to keep the tone bright, sunny, and explicitly inviting. * Dynamics: High projection without shouting. Punchy consonants and elongated vowels on excitement words (e.g., \"Beauuutiful morning\"). Pace: Speaks at an energetic pace, keeping up with the fast music. Speaks with A \"bouncing\" cadence. High-speed delivery with fluid transitions — no dead air, no gaps. Accent: Jaz is from Brixton, London ### SAMPLE CONTEXT Jaz is the industry standard for Top 40 radio, high-octane event promos, or any script that requires a charismatic Estuary accent and 11/10 infectious energy. #### TRANSCRIPT [excitedly] Yes, massive vibes in the studio! You are locked in and it is absolutely popping off in London right now. If you're stuck on the tube, or just sat there pretending to work... stop it. Seriously, I see you. [shouting] Turn this up! We've got the project roadmap landing in three, two... let's go! Here's what I got using that example prompt: Your browser does not support the audio element. Then I modified it to say \"Jaz is from Newcastle\" and \"... requires a charismatic Newcastle accent\" and got this result: Your browser does not support the audio element. Here's Exeter, Devon for good measure: Your browser does not support the audio element. I had Gemini 3.1 Pro vibe code this UI for trying it out : Tags: google , text-to-speech , tools , ai , prompt-engineering , generative-ai , llms , gemini , llm-release , vibe-coding",
+      "extracted": {
+        "digest": "It's presented via the standard Gemini API using gemini-3.1-flash-tts-preview as the model ID, but can only output audio files. Google released Gemini 3.1 Flash TTS today, a new text-to-speech model that can be directed using prompts.",
+        "digestZh": "主要观点：这条更新在提醒产品团队重新判断什么该被记住、什么该被延续。 核心内容：Google released Gemini 3.1 Flash TTS today, a new text-to-speech model that can be directed using prompts.",
+        "mainPoint": "It's presented via the standard Gemini API using gemini-3.1-flash-tts-preview as the model ID, but can only output audio files.",
+        "mainPointZh": "It's presented via the standard Gemini API using gemini-3.1-flash-tts-preview as the model ID, but can only output audio files.",
+        "coreContent": "Google released Gemini 3.1 Flash TTS today, a new text-to-speech model that can be directed using prompts.",
+        "coreContentZh": "Google released Gemini 3.1 Flash TTS today, a new text-to-speech model that can be directed using prompts."
+      },
+      "link": "https://simonwillison.net/2026/Apr/15/gemini-31-flash-tts/#atom-everything",
+      "publishedAt": "2026-04-15T17:13:14.000Z",
+      "authority": "personal",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "secondary",
+        "score": 2
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "simon-willison",
+      "sourceName": "Simon Willison",
+      "title": "Gemini 3.1 Flash TTS",
+      "summary": "Tool: Gemini 3.1 Flash TTS See my notes on Google's new Gemini 3.1 Flash TTS text-to-speech model. Tags: gemini , google",
+      "extracted": {
+        "digest": "Gemini 3.1 Flash TTS See my notes on Google's new Gemini 3.1 Flash TTS text-to-speech model.",
+        "digestZh": "主要观点：这条更新值得关注，因为它可能改写相关领域的产品判断。 核心内容：Gemini 3.1 Flash TTS See my notes on Google's new Gemini 3.1 Flash TTS text-to-speech model.",
+        "mainPoint": "Gemini 3.1 Flash TTS See my notes on Google's new Gemini 3.1 Flash TTS text-to-speech model.",
+        "mainPointZh": "Gemini 3.1 Flash TTS See my notes on Google's new Gemini 3.1 Flash TTS text-to-speech model.",
+        "coreContent": "Gemini 3.1 Flash TTS See my notes on Google's new Gemini 3.1 Flash TTS text-to-speech model.",
+        "coreContentZh": "Gemini 3.1 Flash TTS See my notes on Google's new Gemini 3.1 Flash TTS text-to-speech model."
+      },
+      "link": "https://simonwillison.net/2026/Apr/15/gemini-flash-tts/#atom-everything",
+      "publishedAt": "2026-04-15T16:41:46.000Z",
+      "authority": "personal",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "secondary",
+        "score": 2
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "google-ai",
+      "sourceName": "Google AI Blog",
+      "title": "Gemini 3.1 Flash TTS: the next generation of expressive AI speech",
+      "summary": "Gemini 3.1 Flash TTS is now available across Google products.",
+      "extracted": {
+        "digest": "Gemini 3.1 Flash TTS is now available across Google products.",
+        "digestZh": "主要观点：这条更新值得关注，因为它可能改写相关领域的产品判断。 核心内容：Gemini 3.1 Flash TTS is now available across Google products.",
+        "mainPoint": "Gemini 3.1 Flash TTS is now available across Google products.",
+        "mainPointZh": "Gemini 3.1 Flash TTS is now available across Google products.",
+        "coreContent": "Gemini 3.1 Flash TTS is now available across Google products.",
+        "coreContentZh": "Gemini 3.1 Flash TTS is now available across Google products."
+      },
+      "link": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-flash-tts/",
+      "publishedAt": "2026-04-15T15:00:00.000Z",
+      "authority": "official",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "the-verge-ai",
+      "sourceName": "The Verge AI",
+      "title": "Adobe embraces conversational AI editing, marking a ‘fundamental shift’ in creative work",
+      "summary": "Adobe is fully embracing AI tools that enable creators to edit their work using descriptive prompts, instead of manually using specific Creative Cloud apps. The software giant's new Firefly AI Assistant allows users to describe what they want to change by typing their own words into a conversational interface. Adobe says this marks a \"fundamental […]",
+      "extracted": {
+        "digest": "Adobe is fully embracing AI tools that enable creators to edit their work using descriptive prompts, instead of manually using specific Creative Clou… The software giant's new Firefly AI Assistant allows users to describe what they want to change by typing th…",
+        "digestZh": "主要观点：这条更新在说明 AI 交互正在从一次性操作走向更明确的界面和任务结构。 核心内容：The software giant's new Firefly AI Assistant allows users to describe what they want to change by typing their own words into a conversational interface.",
+        "mainPoint": "Adobe is fully embracing AI tools that enable creators to edit their work using descriptive prompts, instead of manually using specific Creative Clou…",
+        "mainPointZh": "Adobe is fully embracing AI tools that enable creators to edit their work using descriptive prompts, instead of manually using specific Creative Clou…",
+        "coreContent": "The software giant's new Firefly AI Assistant allows users to describe what they want to change by typing their own words into a conversational interface.",
+        "coreContentZh": "The software giant's new Firefly AI Assistant allows users to describe what they want to change by typing their own words into a conversational interface."
+      },
+      "link": "https://www.theverge.com/tech/912287/adobe-firefly-ai-assistant-announcement-editing",
+      "publishedAt": "2026-04-15T13:15:28.000Z",
+      "authority": "media",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "watch",
+        "score": 1
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "the-verge-ai",
+      "sourceName": "The Verge AI",
+      "title": "Grok’s sexual deepfakes almost got it banned from Apple’s App Store. Almost.",
+      "summary": "Apple quietly threatened to kick Elon Musk's AI app, Grok, from its App Store in January over its failure to curb the surge of nonconsensual sexual deepfakes flooding X, according to NBC News. It was a muted show of force from one of tech's most powerful gatekeepers, made behind closed doors even as the undressing […]",
+      "extracted": {
+        "digest": "Apple quietly threatened to kick Elon Musk's AI app, Grok, from its App Store in January over its failure to curb the surge of nonconsensual sexual d… It was a muted show of force from one of tech's most powerful gatekeepers, made behind closed doors even as…",
+        "digestZh": "主要观点：这条更新值得关注，因为它可能改写相关领域的产品判断。 核心内容：It was a muted show of force from one of tech's most powerful gatekeepers, made behind closed doors even as the undressing […]",
+        "mainPoint": "Apple quietly threatened to kick Elon Musk's AI app, Grok, from its App Store in January over its failure to curb the surge of nonconsensual sexual d…",
+        "mainPointZh": "Apple quietly threatened to kick Elon Musk's AI app, Grok, from its App Store in January over its failure to curb the surge of nonconsensual sexual d…",
+        "coreContent": "It was a muted show of force from one of tech's most powerful gatekeepers, made behind closed doors even as the undressing […]",
+        "coreContentZh": "It was a muted show of force from one of tech's most powerful gatekeepers, made behind closed doors even as the undressing […]"
+      },
+      "link": "https://www.theverge.com/ai-artificial-intelligence/912297/apple-app-store-ban-grok-x-deepfakes",
+      "publishedAt": "2026-04-15T11:21:43.000Z",
+      "authority": "media",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "watch",
+        "score": 1
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI Newsroom",
+      "title": "The next evolution of the Agents SDK",
+      "summary": "OpenAI updates the Agents SDK with native sandbox execution and a model-native harness, helping developers build secure, long-running agents across files and tools.",
+      "extracted": {
+        "digest": "OpenAI updates the Agents SDK with native sandbox execution and a model-native harness, helping developers build secure, long-running agents across f… OpenAI updates the Agents SDK with native sandbox execution and a model-native harness, helping developers b…",
+        "digestZh": "主要观点：这条更新值得关注，因为它可能改写相关领域的产品判断。 核心内容：OpenAI updates the Agents SDK with native sandbox execution and a model-native harness, helping developers build secure, long-running agents across files and tools.",
+        "mainPoint": "OpenAI updates the Agents SDK with native sandbox execution and a model-native harness, helping developers build secure, long-running agents across f…",
+        "mainPointZh": "OpenAI updates the Agents SDK with native sandbox execution and a model-native harness, helping developers build secure, long-running agents across f…",
+        "coreContent": "OpenAI updates the Agents SDK with native sandbox execution and a model-native harness, helping developers build secure, long-running agents across files and tools.",
+        "coreContentZh": "OpenAI updates the Agents SDK with native sandbox execution and a model-native harness, helping developers build secure, long-running agents across files and tools."
+      },
+      "link": "https://openai.com/index/the-next-evolution-of-the-agents-sdk",
+      "publishedAt": "2026-04-15T10:00:00.000Z",
+      "authority": "official",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "mit-tech-review",
+      "sourceName": "MIT Technology Review",
+      "title": "Building trust in the AI era with privacy-led UX",
+      "summary": "The practice of privacy-led user experience (UX) is a design philosophy that treats transparency around data collection and usage as an integral part of the customer relationship. An undertapped opportunity in digital marketing, privacy-led UX treats user consent not as a tick-box compliance exercise, but rather as the first overture in an ongoing customer relationship.…",
+      "extracted": {
+        "digest": "The practice of privacy-led user experience (UX) is a design philosophy that treats transparency around data collection and usage as an integral part… An undertapped opportunity in digital marketing, privacy-led UX treats user consent not as a tick-box compli…",
+        "digestZh": "主要观点：这条更新在说明信任、权限和风险展示正在变成产品前台问题。 核心内容：An undertapped opportunity in digital marketing, privacy-led UX treats user consent not as a tick-box compliance exercise, but rather as the first overture in an ongoing customer relationship.…",
+        "mainPoint": "The practice of privacy-led user experience (UX) is a design philosophy that treats transparency around data collection and usage as an integral part…",
+        "mainPointZh": "The practice of privacy-led user experience (UX) is a design philosophy that treats transparency around data collection and usage as an integral part…",
+        "coreContent": "An undertapped opportunity in digital marketing, privacy-led UX treats user consent not as a tick-box compliance exercise, but rather as the first overture in an ongoing customer relationship.…",
+        "coreContentZh": "An undertapped opportunity in digital marketing, privacy-led UX treats user consent not as a tick-box compliance exercise, but rather as the first overture in an ongoing customer relationship.…"
+      },
+      "link": "https://www.technologyreview.com/2026/04/15/1135530/building-trust-in-the-ai-era-with-privacy-led-ux/",
+      "publishedAt": "2026-04-15T06:00:00.000Z",
+      "authority": "media",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "secondary",
+        "score": 2
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "the-verge-ai",
+      "sourceName": "The Verge AI",
+      "title": "The attacks on Sam Altman are a warning for the AI world",
+      "summary": "Before allegedly throwing a Molotov cocktail at OpenAI CEO Sam Altman's home, the 20-year-old accused attacker wrote about his fear that the AI race would cause humans to go extinct, the San Francisco Chronicle found. Two days later, Altman's home appeared to be targeted a second time, according to The San Francisco Standard. Only a […]",
+      "extracted": {
+        "digest": "Before allegedly throwing a Molotov cocktail at OpenAI CEO Sam Altman's home, the 20-year-old accused attacker wrote about his fear that the AI race… Two days later, Altman's home appeared to be targeted a second time, according to The San Francisco Standard.",
+        "digestZh": "主要观点：这条更新值得关注，因为它可能改写相关领域的产品判断。 核心内容：Two days later, Altman's home appeared to be targeted a second time, according to The San Francisco Standard.",
+        "mainPoint": "Before allegedly throwing a Molotov cocktail at OpenAI CEO Sam Altman's home, the 20-year-old accused attacker wrote about his fear that the AI race…",
+        "mainPointZh": "Before allegedly throwing a Molotov cocktail at OpenAI CEO Sam Altman's home, the 20-year-old accused attacker wrote about his fear that the AI race…",
+        "coreContent": "Two days later, Altman's home appeared to be targeted a second time, according to The San Francisco Standard.",
+        "coreContentZh": "Two days later, Altman's home appeared to be targeted a second time, according to The San Francisco Standard."
+      },
+      "link": "https://www.theverge.com/ai-artificial-intelligence/911778/ai-violence-sam-altman-home",
+      "publishedAt": "2026-04-14T19:20:05.000Z",
+      "authority": "media",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "watch",
+        "score": 1
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "mit-tech-review",
+      "sourceName": "MIT Technology Review",
+      "title": "Redefining the future of software engineering",
+      "summary": "Software engineering has experienced two seismic shifts this century. First was the rise of the open source movement, which gradually made code accessible to developers and engineers everywhere. Second, the adoption of development operations (DevOps) and agile methodologies took software from siloed to collaborative development and from batch to continuous delivery. Now, a third such…",
+      "extracted": {
+        "digest": "Software engineering has experienced two seismic shifts this century. First was the rise of the open source movement, which gradually made code accessible to developers and engineers everywhere.",
+        "digestZh": "主要观点：这条更新在说明 AI 正在从单点功能走向可复用的工作流单元。 核心内容：First was the rise of the open source movement, which gradually made code accessible to developers and engineers everywhere.",
+        "mainPoint": "Software engineering has experienced two seismic shifts this century.",
+        "mainPointZh": "Software engineering has experienced two seismic shifts this century.",
+        "coreContent": "First was the rise of the open source movement, which gradually made code accessible to developers and engineers everywhere.",
+        "coreContentZh": "First was the rise of the open source movement, which gradually made code accessible to developers and engineers everywhere."
+      },
+      "link": "https://www.technologyreview.com/2026/04/14/1134397/redefining-the-future-of-software-engineering/",
+      "publishedAt": "2026-04-14T18:00:00.000Z",
+      "authority": "media",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "secondary",
+        "score": 2
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "google-ai",
+      "sourceName": "Google AI Blog",
+      "title": "Turn your best AI prompts into one-click tools in Chrome",
+      "summary": "Skills in Chrome let you discover, save and remix AI workflows — and repeat them instantly.",
+      "extracted": {
+        "digest": "Skills in Chrome let you discover, save and remix AI workflows — and repeat them instantly.",
+        "digestZh": "主要观点：这条更新在说明 AI 正在从单点功能走向可复用的工作流单元。 核心内容：Skills in Chrome let you discover, save and remix AI workflows — and repeat them instantly.",
+        "mainPoint": "Skills in Chrome let you discover, save and remix AI workflows — and repeat them instantly.",
+        "mainPointZh": "Skills in Chrome let you discover, save and remix AI workflows — and repeat them instantly.",
+        "coreContent": "Skills in Chrome let you discover, save and remix AI workflows — and repeat them instantly.",
+        "coreContentZh": "Skills in Chrome let you discover, save and remix AI workflows — and repeat them instantly."
+      },
+      "link": "https://blog.google/products-and-platforms/products/chrome/skills-in-chrome/",
+      "publishedAt": "2026-04-14T17:00:00.000Z",
+      "authority": "official",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "mit-tech-review",
+      "sourceName": "MIT Technology Review",
+      "title": "Coming soon: 10 Things That Matter in AI Right Now",
+      "summary": "Each year we compile our 10 Breakthrough Technologies list, featuring our educated predictions for which technologies will have the biggest impact on how we live and work. This year, however, we had a dilemma. While our final picks encompass all our core coverage areas (energy, AI, and biotech, plus a few more), our 2026 list…",
+      "extracted": {
+        "digest": "While our final picks encompass all our core coverage areas (energy, AI, and biotech, plus a few more), our 2026 list… Each year we compile our 10 Breakthrough Technologies list, featuring our educated predictions for which technologies will have the biggest…",
+        "digestZh": "主要观点：这条更新值得关注，因为它可能改写相关领域的产品判断。 核心内容：Each year we compile our 10 Breakthrough Technologies list, featuring our educated predictions for which technologies will have the biggest impact on how we live and work.",
+        "mainPoint": "While our final picks encompass all our core coverage areas (energy, AI, and biotech, plus a few more), our 2026 list…",
+        "mainPointZh": "While our final picks encompass all our core coverage areas (energy, AI, and biotech, plus a few more), our 2026 list…",
+        "coreContent": "Each year we compile our 10 Breakthrough Technologies list, featuring our educated predictions for which technologies will have the biggest impact on how we live and work.",
+        "coreContentZh": "Each year we compile our 10 Breakthrough Technologies list, featuring our educated predictions for which technologies will have the biggest impact on how we live and work."
+      },
+      "link": "https://www.technologyreview.com/2026/04/14/1135298/coming-soon-10-things-that-matter-in-ai-right-now/",
+      "publishedAt": "2026-04-14T11:00:00.000Z",
+      "authority": "media",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "secondary",
+        "score": 2
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "google-ai",
+      "sourceName": "Google AI Blog",
+      "title": "Bringing people together at AI for the Economy Forum",
+      "summary": "Google is bringing people together in Washington D.C. at our AI for the Economy Forum.",
+      "extracted": {
+        "digest": "Google is bringing people together in Washington D.C. at our AI for the Economy Forum.",
+        "digestZh": "主要观点：这条更新值得关注，因为它可能改写相关领域的产品判断。 核心内容：at our AI for the Economy Forum.",
+        "mainPoint": "Google is bringing people together in Washington D.C.",
+        "mainPointZh": "Google is bringing people together in Washington D.C.",
+        "coreContent": "at our AI for the Economy Forum.",
+        "coreContentZh": "at our AI for the Economy Forum."
+      },
+      "link": "https://blog.google/company-news/outreach-and-initiatives/creating-opportunity/ai-economy-forum/",
+      "publishedAt": "2026-04-14T09:00:00.000Z",
+      "authority": "official",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI Newsroom",
+      "title": "Trusted access for the next era of cyber defense",
+      "summary": "OpenAI expands its Trusted Access for Cyber program, introducing GPT-5.4-Cyber to vetted defenders and strengthening safeguards as AI cybersecurity capabilities advance.",
+      "extracted": {
+        "digest": "OpenAI expands its Trusted Access for Cyber program, introducing GPT-5.4-Cyber to vetted defenders and strengthening safeguards as AI cybersecurity c… OpenAI expands its Trusted Access for Cyber program, introducing GPT-5.4-Cyber to vetted defenders and stren…",
+        "digestZh": "主要观点：这条更新在说明信任、权限和风险展示正在变成产品前台问题。 核心内容：OpenAI expands its Trusted Access for Cyber program, introducing GPT-5.4-Cyber to vetted defenders and strengthening safeguards as AI cybersecurity capabilities advance.",
+        "mainPoint": "OpenAI expands its Trusted Access for Cyber program, introducing GPT-5.4-Cyber to vetted defenders and strengthening safeguards as AI cybersecurity c…",
+        "mainPointZh": "OpenAI expands its Trusted Access for Cyber program, introducing GPT-5.4-Cyber to vetted defenders and strengthening safeguards as AI cybersecurity c…",
+        "coreContent": "OpenAI expands its Trusted Access for Cyber program, introducing GPT-5.4-Cyber to vetted defenders and strengthening safeguards as AI cybersecurity capabilities advance.",
+        "coreContentZh": "OpenAI expands its Trusted Access for Cyber program, introducing GPT-5.4-Cyber to vetted defenders and strengthening safeguards as AI cybersecurity capabilities advance."
+      },
+      "link": "https://openai.com/index/scaling-trusted-access-for-cyber-defense",
+      "publishedAt": "2026-04-14T00:00:00.000Z",
+      "authority": "official",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "mit-tech-review",
+      "sourceName": "MIT Technology Review",
+      "title": "Why opinion on AI is so divided",
+      "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. In an industry that doesn’t stand still, Stanford’s AI Index, an annual roundup of key results and trends, is a chance to take a breath. (It’s a marathon, not a sprint, after…",
+      "extracted": {
+        "digest": "In an industry that doesn’t stand still, Stanford’s AI Index, an annual roundup of key results and trends, is a chance to take a breath. (It’s a marathon, not a sprint, after…",
+        "digestZh": "主要观点：这条更新更像市场和产品信号，值得用来判断行业方向而不是只看新闻热度。 核心内容：(It’s a marathon, not a sprint, after…",
+        "mainPoint": "In an industry that doesn’t stand still, Stanford’s AI Index, an annual roundup of key results and trends, is a chance to take a breath.",
+        "mainPointZh": "In an industry that doesn’t stand still, Stanford’s AI Index, an annual roundup of key results and trends, is a chance to take a breath.",
+        "coreContent": "(It’s a marathon, not a sprint, after…",
+        "coreContentZh": "(It’s a marathon, not a sprint, after…"
+      },
+      "link": "https://www.technologyreview.com/2026/04/13/1135720/why-opinion-on-ai-is-so-divided/",
+      "publishedAt": "2026-04-13T15:48:28.000Z",
+      "authority": "media",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "secondary",
+        "score": 2
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "mit-tech-review",
+      "sourceName": "MIT Technology Review",
+      "title": "Want to understand the current state of AI? Check out these charts.",
+      "summary": "If you’re following AI news, you’re probably getting whiplash. AI is a gold rush. AI is a bubble. AI is taking your job. AI can’t even read a clock. The 2026 AI Index from Stanford University’s Institute for Human-Centered Artificial Intelligence, AI’s annual report card, comes out today and cuts through some of that noise.&#160;…",
+      "extracted": {
+        "digest": "If you’re following AI news, you’re probably getting whiplash. The 2026 AI Index from Stanford University’s Institute for Human-Centered Artificial Intelligence, AI’s annual report card, comes out today and cuts through some of that noise.&160;…",
+        "digestZh": "主要观点：这条更新在强调评估、质量判断和反馈闭环的重要性。 核心内容：The 2026 AI Index from Stanford University’s Institute for Human-Centered Artificial Intelligence, AI’s annual report card, comes out today and cuts through some of that noise.&160;…",
+        "mainPoint": "If you’re following AI news, you’re probably getting whiplash.",
+        "mainPointZh": "If you’re following AI news, you’re probably getting whiplash.",
+        "coreContent": "The 2026 AI Index from Stanford University’s Institute for Human-Centered Artificial Intelligence, AI’s annual report card, comes out today and cuts through some of that noise.&160;…",
+        "coreContentZh": "The 2026 AI Index from Stanford University’s Institute for Human-Centered Artificial Intelligence, AI’s annual report card, comes out today and cuts through some of that noise.&160;…"
+      },
+      "link": "https://www.technologyreview.com/2026/04/13/1135675/want-to-understand-the-current-state-of-ai-check-out-these-charts/",
+      "publishedAt": "2026-04-13T13:00:00.000Z",
+      "authority": "media",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "secondary",
+        "score": 2
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI Newsroom",
+      "title": "Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI",
+      "summary": "Cloudflare brings OpenAI’s GPT-5.4 and Codex to Agent Cloud, enabling enterprises to build, deploy, and scale AI agents for real-world tasks with speed and security.",
+      "extracted": {
+        "digest": "Cloudflare brings OpenAI’s GPT-5.4 and Codex to Agent Cloud, enabling enterprises to build, deploy, and scale AI agents for real-world tasks with spe… Cloudflare brings OpenAI’s GPT-5.4 and Codex to Agent Cloud, enabling enterprises to build, deploy, and scal…",
+        "digestZh": "主要观点：这条更新在说明 AI 正在从单点功能走向可复用的工作流单元。 核心内容：Cloudflare brings OpenAI’s GPT-5.4 and Codex to Agent Cloud, enabling enterprises to build, deploy, and scale AI agents for real-world tasks with speed and security.",
+        "mainPoint": "Cloudflare brings OpenAI’s GPT-5.4 and Codex to Agent Cloud, enabling enterprises to build, deploy, and scale AI agents for real-world tasks with spe…",
+        "mainPointZh": "Cloudflare brings OpenAI’s GPT-5.4 and Codex to Agent Cloud, enabling enterprises to build, deploy, and scale AI agents for real-world tasks with spe…",
+        "coreContent": "Cloudflare brings OpenAI’s GPT-5.4 and Codex to Agent Cloud, enabling enterprises to build, deploy, and scale AI agents for real-world tasks with speed and security.",
+        "coreContentZh": "Cloudflare brings OpenAI’s GPT-5.4 and Codex to Agent Cloud, enabling enterprises to build, deploy, and scale AI agents for real-world tasks with speed and security."
+      },
+      "link": "https://openai.com/index/cloudflare-openai-agent-cloud",
+      "publishedAt": "2026-04-13T06:00:00.000Z",
+      "authority": "official",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "nngroup",
+      "sourceName": "Nielsen Norman Group",
+      "title": "Handmade Designs: The New Trust Signal",
+      "summary": "In an era of AI-generated-everything, AI-fatigued users want designs that look like they were made by a person.",
+      "extracted": {
+        "digest": "In an era of AI-generated-everything, AI-fatigued users want designs that look like they were made by a person.",
+        "digestZh": "主要观点：这条更新在说明信任、权限和风险展示正在变成产品前台问题。 核心内容：In an era of AI-generated-everything, AI-fatigued users want designs that look like they were made by a person.",
+        "mainPoint": "In an era of AI-generated-everything, AI-fatigued users want designs that look like they were made by a person.",
+        "mainPointZh": "In an era of AI-generated-everything, AI-fatigued users want designs that look like they were made by a person.",
+        "coreContent": "In an era of AI-generated-everything, AI-fatigued users want designs that look like they were made by a person.",
+        "coreContentZh": "In an era of AI-generated-everything, AI-fatigued users want designs that look like they were made by a person."
+      },
+      "link": "https://www.nngroup.com/articles/handmade-designs/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "publishedAt": "2026-04-10T17:00:00.000Z",
+      "authority": "academic",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "nngroup",
+      "sourceName": "Nielsen Norman Group",
+      "title": "AI Agents as Users",
+      "summary": "AI agents now interact with digital interfaces alongside humans. Designing for both requires rethinking what \"user\" means and prioritizing accessibility.",
+      "extracted": {
+        "digest": "AI agents now interact with digital interfaces alongside humans. Designing for both requires rethinking what \"user\" means and prioritizing accessibility.",
+        "digestZh": "主要观点：这条更新在说明 AI 交互正在从一次性操作走向更明确的界面和任务结构。 核心内容：Designing for both requires rethinking what \"user\" means and prioritizing accessibility.",
+        "mainPoint": "AI agents now interact with digital interfaces alongside humans.",
+        "mainPointZh": "AI agents now interact with digital interfaces alongside humans.",
+        "coreContent": "Designing for both requires rethinking what \"user\" means and prioritizing accessibility.",
+        "coreContentZh": "Designing for both requires rethinking what \"user\" means and prioritizing accessibility."
+      },
+      "link": "https://www.nngroup.com/articles/ai-agents-as-users/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "publishedAt": "2026-04-10T17:00:00.000Z",
+      "authority": "academic",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI Newsroom",
+      "title": "Responsible and safe use of AI",
+      "summary": "Learn how to use AI responsibly with best practices for safety, accuracy, and transparency when using tools like ChatGPT.",
+      "extracted": {
+        "digest": "Learn how to use AI responsibly with best practices for safety, accuracy, and transparency when using tools like ChatGPT.",
+        "digestZh": "主要观点：这条更新在说明信任、权限和风险展示正在变成产品前台问题。 核心内容：Learn how to use AI responsibly with best practices for safety, accuracy, and transparency when using tools like ChatGPT.",
+        "mainPoint": "Learn how to use AI responsibly with best practices for safety, accuracy, and transparency when using tools like ChatGPT.",
+        "mainPointZh": "Learn how to use AI responsibly with best practices for safety, accuracy, and transparency when using tools like ChatGPT.",
+        "coreContent": "Learn how to use AI responsibly with best practices for safety, accuracy, and transparency when using tools like ChatGPT.",
+        "coreContentZh": "Learn how to use AI responsibly with best practices for safety, accuracy, and transparency when using tools like ChatGPT."
+      },
+      "link": "https://openai.com/academy/responsible-and-safe-use",
+      "publishedAt": "2026-04-10T00:00:00.000Z",
+      "authority": "official",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI Newsroom",
+      "title": "Writing with ChatGPT",
+      "summary": "Learn how to use ChatGPT for writing to draft, revise, and refine content with clear structure, tone, and intent.",
+      "extracted": {
+        "digest": "Learn how to use ChatGPT for writing to draft, revise, and refine content with clear structure, tone, and intent.",
+        "digestZh": "主要观点：这条更新值得关注，因为它可能改写相关领域的产品判断。 核心内容：Learn how to use ChatGPT for writing to draft, revise, and refine content with clear structure, tone, and intent.",
+        "mainPoint": "Learn how to use ChatGPT for writing to draft, revise, and refine content with clear structure, tone, and intent.",
+        "mainPointZh": "Learn how to use ChatGPT for writing to draft, revise, and refine content with clear structure, tone, and intent.",
+        "coreContent": "Learn how to use ChatGPT for writing to draft, revise, and refine content with clear structure, tone, and intent.",
+        "coreContentZh": "Learn how to use ChatGPT for writing to draft, revise, and refine content with clear structure, tone, and intent."
+      },
+      "link": "https://openai.com/academy/writing",
+      "publishedAt": "2026-04-10T00:00:00.000Z",
+      "authority": "official",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "microsoft-research",
+      "sourceName": "Microsoft Research Blog",
+      "title": "New Future of Work: AI is driving rapid change, uneven benefits",
+      "summary": "For the past five years, the New Future of Work report has captured how work is changing. This year, the shift feels especially sharp. Previous editions have focused on technology’s role in increasing productivity by automating tasks, accelerating communication, and expanding access to information, as well as the rise of remote work. Today, generative AI […] The post New Future of Work: AI is driving rapid change, uneven benefits appeared first on Microsoft Research .",
+      "extracted": {
+        "digest": "For the past five years, the New Future of Work report has captured how work is changing. Previous editions have focused on technology’s role in increasing productivity by automating tasks, accelerating communication, and expanding access to information, as w…",
+        "digestZh": "主要观点：这条更新在强调评估、质量判断和反馈闭环的重要性。 核心内容：Previous editions have focused on technology’s role in increasing productivity by automating tasks, accelerating communication, and expanding access to information, as well as the rise of remote work.",
+        "mainPoint": "For the past five years, the New Future of Work report has captured how work is changing.",
+        "mainPointZh": "For the past five years, the New Future of Work report has captured how work is changing.",
+        "coreContent": "Previous editions have focused on technology’s role in increasing productivity by automating tasks, accelerating communication, and expanding access to information, as well as the rise of remote work.",
+        "coreContentZh": "Previous editions have focused on technology’s role in increasing productivity by automating tasks, accelerating communication, and expanding access to information, as well as the rise of remote work."
+      },
+      "link": "https://www.microsoft.com/en-us/research/blog/new-future-of-work-ai-is-driving-rapid-change-uneven-benefits/",
+      "publishedAt": "2026-04-09T16:11:44.000Z",
+      "authority": "official",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "microsoft-research",
+      "sourceName": "Microsoft Research Blog",
+      "title": "Ideas: Steering AI toward the work future we want",
+      "summary": "Microsoft Chief Scientist Jaime Teevan and researchers Jenna Butler, Jake Hofman, and Rebecca Janssen unpack the New Future of Work Report 2025 and explore the ideal AI-driven working world. Plus, is AI a tool or a collaborator? And why the answer matters. The post Ideas: Steering AI toward the work future we want appeared first on Microsoft Research .",
+      "extracted": {
+        "digest": "Microsoft Chief Scientist Jaime Teevan and researchers Jenna Butler, Jake Hofman, and Rebecca Janssen unpack the New Future of Work Report 2025 and e… Plus, is AI a tool or a collaborator?",
+        "digestZh": "主要观点：这条更新在强调评估、质量判断和反馈闭环的重要性。 核心内容：Plus, is AI a tool or a collaborator?",
+        "mainPoint": "Microsoft Chief Scientist Jaime Teevan and researchers Jenna Butler, Jake Hofman, and Rebecca Janssen unpack the New Future of Work Report 2025 and e…",
+        "mainPointZh": "Microsoft Chief Scientist Jaime Teevan and researchers Jenna Butler, Jake Hofman, and Rebecca Janssen unpack the New Future of Work Report 2025 and e…",
+        "coreContent": "Plus, is AI a tool or a collaborator?",
+        "coreContentZh": "Plus, is AI a tool or a collaborator?"
+      },
+      "link": "https://www.microsoft.com/en-us/research/podcast/ideas-steering-ai-toward-the-work-future-we-want/",
+      "publishedAt": "2026-04-09T16:10:37.000Z",
+      "authority": "official",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "mit-tech-review",
+      "sourceName": "MIT Technology Review",
+      "title": "Mustafa Suleyman: AI development won’t hit a wall anytime soon—here’s why",
+      "summary": "We evolved for a linear world. If you walk for an hour, you cover a certain distance. Walk for two hours and you cover double that distance. This intuition served us well on the savannah. But it catastrophically fails when confronting AI and the core exponential trends at its heart. From the time I began…",
+      "extracted": {
+        "digest": "If you walk for an hour, you cover a certain distance. But it catastrophically fails when confronting AI and the core exponential trends at its heart.",
+        "digestZh": "主要观点：这条更新值得关注，因为它可能改写相关领域的产品判断。 核心内容：But it catastrophically fails when confronting AI and the core exponential trends at its heart.",
+        "mainPoint": "If you walk for an hour, you cover a certain distance.",
+        "mainPointZh": "If you walk for an hour, you cover a certain distance.",
+        "coreContent": "But it catastrophically fails when confronting AI and the core exponential trends at its heart.",
+        "coreContentZh": "But it catastrophically fails when confronting AI and the core exponential trends at its heart."
+      },
+      "link": "https://www.technologyreview.com/2026/04/08/1135398/mustafa-suleyman-ai-future/",
+      "publishedAt": "2026-04-08T14:00:00.000Z",
+      "authority": "media",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "secondary",
+        "score": 2
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "nngroup",
+      "sourceName": "Nielsen Norman Group",
+      "title": "AI Can Help with Survey Writing, But It Still Requires Human Expertise",
+      "summary": "AI can produce polished survey drafts quickly, but experienced human review is still needed to catch subtle survey-design flaws that weaken data quality.",
+      "extracted": {
+        "digest": "AI can produce polished survey drafts quickly, but experienced human review is still needed to catch subtle survey-design flaws that weaken data qual… AI can produce polished survey drafts quickly, but experienced human review is still needed to catch subtle…",
+        "digestZh": "主要观点：这条更新在强调评估、质量判断和反馈闭环的重要性。 核心内容：AI can produce polished survey drafts quickly, but experienced human review is still needed to catch subtle survey-design flaws that weaken data quality.",
+        "mainPoint": "AI can produce polished survey drafts quickly, but experienced human review is still needed to catch subtle survey-design flaws that weaken data qual…",
+        "mainPointZh": "AI can produce polished survey drafts quickly, but experienced human review is still needed to catch subtle survey-design flaws that weaken data qual…",
+        "coreContent": "AI can produce polished survey drafts quickly, but experienced human review is still needed to catch subtle survey-design flaws that weaken data quality.",
+        "coreContentZh": "AI can produce polished survey drafts quickly, but experienced human review is still needed to catch subtle survey-design flaws that weaken data quality."
+      },
+      "link": "https://www.nngroup.com/articles/ai-survey-writing/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "publishedAt": "2026-04-03T17:00:00.000Z",
+      "authority": "academic",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "nngroup",
+      "sourceName": "Nielsen Norman Group",
+      "title": "A Concrete Definition of an AI Agent",
+      "summary": "An AI agent pursues a goal by iteratively taking actions, evaluating progress, and deciding next steps. Useful agents must be reliable, adaptive, and accurate.",
+      "extracted": {
+        "digest": "An AI agent pursues a goal by iteratively taking actions, evaluating progress, and deciding next steps. Useful agents must be reliable, adaptive, and accurate.",
+        "digestZh": "主要观点：这条更新值得关注，因为它可能改写相关领域的产品判断。 核心内容：Useful agents must be reliable, adaptive, and accurate.",
+        "mainPoint": "An AI agent pursues a goal by iteratively taking actions, evaluating progress, and deciding next steps.",
+        "mainPointZh": "An AI agent pursues a goal by iteratively taking actions, evaluating progress, and deciding next steps.",
+        "coreContent": "Useful agents must be reliable, adaptive, and accurate.",
+        "coreContentZh": "Useful agents must be reliable, adaptive, and accurate."
+      },
+      "link": "https://www.nngroup.com/articles/definition-ai-agent/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "publishedAt": "2026-04-03T17:00:00.000Z",
+      "authority": "academic",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "google-ai",
+      "sourceName": "Google AI Blog",
+      "title": "New ways to balance cost and reliability in the Gemini API",
+      "summary": "Google is introducing two new inference tiers to the Gemini API, Flex and Priority, to balance cost and latency.",
+      "extracted": {
+        "digest": "Google is introducing two new inference tiers to the Gemini API, Flex and Priority, to balance cost and latency.",
+        "digestZh": "主要观点：这条更新值得关注，因为它可能改写相关领域的产品判断。 核心内容：Google is introducing two new inference tiers to the Gemini API, Flex and Priority, to balance cost and latency.",
+        "mainPoint": "Google is introducing two new inference tiers to the Gemini API, Flex and Priority, to balance cost and latency.",
+        "mainPointZh": "Google is introducing two new inference tiers to the Gemini API, Flex and Priority, to balance cost and latency.",
+        "coreContent": "Google is introducing two new inference tiers to the Gemini API, Flex and Priority, to balance cost and latency.",
+        "coreContentZh": "Google is introducing two new inference tiers to the Gemini API, Flex and Priority, to balance cost and latency."
+      },
+      "link": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-flex-and-priority-inference/",
+      "publishedAt": "2026-04-02T16:00:00.000Z",
+      "authority": "official",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "google-ai",
+      "sourceName": "Google AI Blog",
+      "title": "Create, edit and share videos at no cost in Google Vids",
+      "summary": "New AI capabilities are coming to Google Vids, powered by Lyria 3 and Veo 3.1, like high-quality video generation at no cost and more.",
+      "extracted": {
+        "digest": "New AI capabilities are coming to Google Vids, powered by Lyria 3 and Veo 3.1, like high-quality video generation at no cost and more.",
+        "digestZh": "主要观点：这条更新在强调评估、质量判断和反馈闭环的重要性。 核心内容：New AI capabilities are coming to Google Vids, powered by Lyria 3 and Veo 3.1, like high-quality video generation at no cost and more.",
+        "mainPoint": "New AI capabilities are coming to Google Vids, powered by Lyria 3 and Veo 3.1, like high-quality video generation at no cost and more.",
+        "mainPointZh": "New AI capabilities are coming to Google Vids, powered by Lyria 3 and Veo 3.1, like high-quality video generation at no cost and more.",
+        "coreContent": "New AI capabilities are coming to Google Vids, powered by Lyria 3 and Veo 3.1, like high-quality video generation at no cost and more.",
+        "coreContentZh": "New AI capabilities are coming to Google Vids, powered by Lyria 3 and Veo 3.1, like high-quality video generation at no cost and more."
+      },
+      "link": "https://blog.google/products-and-platforms/products/workspace/google-vids-updates-lyria-veo/",
+      "publishedAt": "2026-04-02T16:00:00.000Z",
+      "authority": "official",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "microsoft-research",
+      "sourceName": "Microsoft Research Blog",
+      "title": "ADeLe: Predicting and explaining AI performance across tasks",
+      "summary": "AI benchmarks report how large language models (LLMs) perform on specific tasks but provide little insight into their underlying capabilities that drive their performance. They do not explain failures or reliably predict outcomes on new tasks. To address this, Microsoft researchers in collaboration with Princeton University and&#160;Universitat&#160;Politècnica&#160;de València introduce ADeLe (opens in new tab) (AI […] The post ADeLe: Predicting and explaining AI performance across tasks appeared first on Microsoft Research .",
+      "extracted": {
+        "digest": "They do not explain failures or reliably predict outcomes on new tasks. AI benchmarks report how large language models (LLMs) perform on specific tasks but provide little insight into their underlying capabilities that drive their performance.",
+        "digestZh": "主要观点：这条更新在强调评估、质量判断和反馈闭环的重要性。 核心内容：AI benchmarks report how large language models (LLMs) perform on specific tasks but provide little insight into their underlying capabilities that drive their performance.",
+        "mainPoint": "They do not explain failures or reliably predict outcomes on new tasks.",
+        "mainPointZh": "They do not explain failures or reliably predict outcomes on new tasks.",
+        "coreContent": "AI benchmarks report how large language models (LLMs) perform on specific tasks but provide little insight into their underlying capabilities that drive their performance.",
+        "coreContentZh": "AI benchmarks report how large language models (LLMs) perform on specific tasks but provide little insight into their underlying capabilities that drive their performance."
+      },
+      "link": "https://www.microsoft.com/en-us/research/blog/adele-predicting-and-explaining-ai-performance-across-tasks/",
+      "publishedAt": "2026-04-01T16:00:58.000Z",
+      "authority": "official",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "google-ai",
+      "sourceName": "Google AI Blog",
+      "title": "We’re creating a new satellite imagery map to help protect Brazil’s forests.",
+      "summary": "Google partnered with the Brazilian government on a satellite imagery map to help protect the country’s forests.",
+      "extracted": {
+        "digest": "Google partnered with the Brazilian government on a satellite imagery map to help protect the country’s forests.",
+        "digestZh": "主要观点：这条更新值得关注，因为它可能改写相关领域的产品判断。 核心内容：Google partnered with the Brazilian government on a satellite imagery map to help protect the country’s forests.",
+        "mainPoint": "Google partnered with the Brazilian government on a satellite imagery map to help protect the country’s forests.",
+        "mainPointZh": "Google partnered with the Brazilian government on a satellite imagery map to help protect the country’s forests.",
+        "coreContent": "Google partnered with the Brazilian government on a satellite imagery map to help protect the country’s forests.",
+        "coreContentZh": "Google partnered with the Brazilian government on a satellite imagery map to help protect the country’s forests."
+      },
+      "link": "https://blog.google/products-and-platforms/products/earth/satellite-imagery-brazilian-deforestation/",
+      "publishedAt": "2026-04-01T13:30:00.000Z",
+      "authority": "official",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "nngroup",
+      "sourceName": "Nielsen Norman Group",
+      "title": "GenUI vs. Vibe Coding: Who’s Designing?",
+      "summary": "With generative UI, the AI system decides to generate an interactive element or entire product in response to a user need. Vibe coding is when users request the AI to build it.",
+      "extracted": {
+        "digest": "Vibe coding is when users request the AI to build it. With generative UI, the AI system decides to generate an interactive element or entire product in response to a user need.",
+        "digestZh": "主要观点：这条更新在说明 AI 交互正在从一次性操作走向更明确的界面和任务结构。 核心内容：With generative UI, the AI system decides to generate an interactive element or entire product in response to a user need.",
+        "mainPoint": "Vibe coding is when users request the AI to build it.",
+        "mainPointZh": "Vibe coding is when users request the AI to build it.",
+        "coreContent": "With generative UI, the AI system decides to generate an interactive element or entire product in response to a user need.",
+        "coreContentZh": "With generative UI, the AI system decides to generate an interactive element or entire product in response to a user need."
+      },
+      "link": "https://www.nngroup.com/articles/genui-vs-vibe/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "publishedAt": "2026-03-27T17:00:00.000Z",
+      "authority": "academic",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "nngroup",
+      "sourceName": "Nielsen Norman Group",
+      "title": "Minimum Viable Product (MVP): Definition",
+      "summary": "MVPs are learning tools that test whether an idea is valuable to users.",
+      "extracted": {
+        "digest": "MVPs are learning tools that test whether an idea is valuable to users.",
+        "digestZh": "主要观点：这条更新在说明 AI 交互正在从一次性操作走向更明确的界面和任务结构。 核心内容：MVPs are learning tools that test whether an idea is valuable to users.",
+        "mainPoint": "MVPs are learning tools that test whether an idea is valuable to users.",
+        "mainPointZh": "MVPs are learning tools that test whether an idea is valuable to users.",
+        "coreContent": "MVPs are learning tools that test whether an idea is valuable to users.",
+        "coreContentZh": "MVPs are learning tools that test whether an idea is valuable to users."
+      },
+      "link": "https://www.nngroup.com/articles/mvp-definition/?utm_source=rss&utm_medium=feed&utm_campaign=rss-syndication",
+      "publishedAt": "2026-03-27T17:00:00.000Z",
+      "authority": "academic",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "microsoft-research",
+      "sourceName": "Microsoft Research Blog",
+      "title": "AsgardBench: A benchmark for visually grounded interactive planning",
+      "summary": "Imagine a robot tasked with cleaning a kitchen. It needs to observe its environment, decide what to do, and adjust when things don’t go as expected, for example, when the mug it was tasked to wash is already clean, or the sink is full of other items. This is the domain of embodied AI: systems […] The post AsgardBench: A benchmark for visually grounded interactive planning appeared first on Microsoft Research .",
+      "extracted": {
+        "digest": "It needs to observe its environment, decide what to do, and adjust when things don’t go as expected, for example, when the mug it was tasked to wash… Imagine a robot tasked with cleaning a kitchen.",
+        "digestZh": "主要观点：这条更新在强调评估、质量判断和反馈闭环的重要性。 核心内容：Imagine a robot tasked with cleaning a kitchen.",
+        "mainPoint": "It needs to observe its environment, decide what to do, and adjust when things don’t go as expected, for example, when the mug it was tasked to wash…",
+        "mainPointZh": "It needs to observe its environment, decide what to do, and adjust when things don’t go as expected, for example, when the mug it was tasked to wash…",
+        "coreContent": "Imagine a robot tasked with cleaning a kitchen.",
+        "coreContentZh": "Imagine a robot tasked with cleaning a kitchen."
+      },
+      "link": "https://www.microsoft.com/en-us/research/blog/asgardbench-a-benchmark-for-visually-grounded-interactive-planning/",
+      "publishedAt": "2026-03-26T19:02:53.000Z",
+      "authority": "official",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "microsoft-research",
+      "sourceName": "Microsoft Research Blog",
+      "title": "GroundedPlanBench: Spatially grounded long-horizon task planning for robot manipulation",
+      "summary": "Vision-language models (VLMs) use images and text to plan robot actions, but they still struggle to decide what actions to take and where to take them. Most systems split these decisions into two steps: a VLM generates a plan in natural language, and a separate model translates it into executable actions. This approach often breaks […] The post GroundedPlanBench: Spatially grounded long-horizon task planning for robot manipulation appeared first on Microsoft Research .",
+      "extracted": {
+        "digest": "Vision-language models (VLMs) use images and text to plan robot actions, but they still struggle to decide what actions to take and where to take the… Most systems split these decisions into two steps: a VLM generates a plan in natural language, and a separat…",
+        "digestZh": "主要观点：这条更新值得关注，因为它可能改写相关领域的产品判断。 核心内容：Most systems split these decisions into two steps: a VLM generates a plan in natural language, and a separate model translates it into executable actions.",
+        "mainPoint": "Vision-language models (VLMs) use images and text to plan robot actions, but they still struggle to decide what actions to take and where to take the…",
+        "mainPointZh": "Vision-language models (VLMs) use images and text to plan robot actions, but they still struggle to decide what actions to take and where to take the…",
+        "coreContent": "Most systems split these decisions into two steps: a VLM generates a plan in natural language, and a separate model translates it into executable actions.",
+        "coreContentZh": "Most systems split these decisions into two steps: a VLM generates a plan in natural language, and a separate model translates it into executable actions."
+      },
+      "link": "https://www.microsoft.com/en-us/research/blog/groundedplanbench-spatially-grounded-long-horizon-task-planning-for-robot-manipulation/",
+      "publishedAt": "2026-03-26T16:03:56.000Z",
+      "authority": "official",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    },
+    {
+      "sourceId": "microsoft-research",
+      "sourceName": "Microsoft Research Blog",
+      "title": "Will machines ever be intelligent?",
+      "summary": "Are machines truly intelligent? AI researchers Subutai Ahmad and Nicolò Fusi join Doug Burger to compare transformer-based AI with the human brain, exploring continual learning, efficiency, and whether today’s models are on a path toward human intelligence. The post Will machines ever be intelligent? appeared first on Microsoft Research .",
+      "extracted": {
+        "digest": "The post Will machines ever be intelligent? AI researchers Subutai Ahmad and Nicolò Fusi join Doug Burger to compare transformer-based AI with the human brain, exploring continual learning, efficiency, and whether today’s models are on a path toward human int…",
+        "digestZh": "主要观点：这条更新在提醒产品团队重新判断什么该被记住、什么该被延续。 核心内容：AI researchers Subutai Ahmad and Nicolò Fusi join Doug Burger to compare transformer-based AI with the human brain, exploring continual learning, efficiency, and whether today’s models are on a path toward human intelli…",
+        "mainPoint": "The post Will machines ever be intelligent?",
+        "mainPointZh": "The post Will machines ever be intelligent?",
+        "coreContent": "AI researchers Subutai Ahmad and Nicolò Fusi join Doug Burger to compare transformer-based AI with the human brain, exploring continual learning, efficiency, and whether today’s models are on a path toward human intelli…",
+        "coreContentZh": "AI researchers Subutai Ahmad and Nicolò Fusi join Doug Burger to compare transformer-based AI with the human brain, exploring continual learning, efficiency, and whether today’s models are on a path toward human intelli…"
+      },
+      "link": "https://www.microsoft.com/en-us/research/podcast/will-machines-ever-be-intelligent/",
+      "publishedAt": "2026-03-23T15:00:21.000Z",
+      "authority": "official",
+      "deliveryMode": "rss",
+      "sourceQuality": {
+        "tier": "core",
+        "score": 3
+      },
+      "ingestedAt": "2026-04-16T11:22:29.038Z"
+    }
+  ]
+}

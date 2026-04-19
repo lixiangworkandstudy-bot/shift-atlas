@@ -46,7 +46,7 @@ export default function PixelPanel({
             </span>
           )}
           {moduleNumber && moduleTitle && (
-            <span className="text-text-tertiary">//</span>
+            <span className="text-text-tertiary">{'//'}</span>
           )}
           {moduleTitle && (
             <span

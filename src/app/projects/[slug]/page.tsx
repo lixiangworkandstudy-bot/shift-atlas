@@ -1,14 +1,6 @@
-'use client';
-
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
-import dynamic from 'next/dynamic';
 import { PixelButton } from '@/components/pixel';
-
-const ProjectVisual = dynamic(
-  () => import('@/components/canvas/ProjectVisual'),
-  { ssr: false }
-);
+import ProjectVisual from '@/components/canvas/ProjectVisual';
 
 interface Project {
   id: string;
@@ -28,6 +20,16 @@ interface Project {
   solution_zh: string;
   results_en: string[];
   results_zh: string[];
+  intro_en?: string;
+  intro_zh?: string;
+  sourceGroups?: {
+    title: string;
+    items: string[];
+  }[];
+  architecture?: {
+    title: string;
+    description: string;
+  }[];
 }
 
 const projects: Record<string, Project> = {
@@ -107,11 +109,107 @@ const projects: Record<string, Project> = {
     results_en: ['Successful launch in new market', 'Brand awareness increased by 200%', 'Consistent messaging across all channels'],
     results_zh: ['成功进入新市场', '品牌知名度提升200%', '所有渠道信息一致'],
   },
+  'shift-atlas': {
+    id: 'shift-atlas',
+    title_en: 'Shift Atlas',
+    title_zh: 'Shift Atlas 认知网站',
+    description_en: 'A design intelligence archive for AI-era systems design and human-AI relationship design.',
+    description_zh: '一个面向 AI 时代系统设计与人机关系设计的设计情报档案网站。',
+    role: 'Independent Builder',
+    scope: 'Knowledge System • Design Intelligence • Web',
+    impact: 'Project website in progress',
+    seed: 5,
+    intro_en: 'Shift Atlas is a website for storing new design cognition. It is not a news feed or inspiration gallery. It is a structured archive that turns AI-era signals into judgments, topics, patterns, and frameworks for long-term design thinking.',
+    intro_zh: 'Shift Atlas 是一个用于储存新设计认知的网站。它不是新闻流，也不是灵感图库，而是把 AI 时代的信号转化为判断、主题、模式和框架的结构化档案。',
+    challenge_en: 'Most AI design websites stop at examples or pattern lists. They help you collect references, but they do not help you accumulate judgment. For long-term work on AI-era systems and human-AI relationships, I need a site that can preserve how a signal becomes a topic, how a topic becomes a pattern, and how repeated patterns become a framework.',
+    challenge_zh: '大多数 AI 设计网站停留在案例或模式列表层面。它们帮助你收集参考，但不能帮助你积累判断。对于长期进行 AI 时代系统设计与人机关系设计的工作，我需要一个能保存“信号如何变成主题、主题如何变成模式、重复模式如何变成框架”的网站。',
+    approach_en: 'I am building the project as a knowledge system instead of a content site. The pipeline starts from source ingestion, then normalizes and scores signals, groups them into topics, classifies them as observe, update, or shift, and finally publishes them into topic dossiers and framework notes.',
+    approach_zh: '我将这个项目作为知识系统而不是内容网站来构建。流程从信息源抓取开始，然后对信号进行标准化与评分，将其归入主题，判定为 observe、update 或 shift，最后发布为 topic dossier 和 framework note。',
+    solution_en: 'The website is structured around five content layers: signals, judgments, topics, patterns, and frameworks. It acts like a design intelligence atlas. The goal is to make new interaction paradigms, changing human-AI relationships, and long-term system-design insights visible and traceable over time.',
+    solution_zh: '网站围绕五个内容层来组织：signals、judgments、topics、patterns 和 frameworks。它像一个设计情报图谱，目标是让新的交互范式、变化中的人机关系以及长期系统设计洞见都能被持续看见和追踪。',
+    results_en: [
+      'Defined the first project architecture and knowledge model',
+      'Confirmed the initial information-source pool and ingestion strategy',
+      'Started the first web page for the project inside the portfolio',
+    ],
+    results_zh: [
+      '定义了项目的第一版架构与知识模型',
+      '确认了初始信息源池与抓取策略',
+      '已在作品集中开始撰写这个项目的网页',
+    ],
+    sourceGroups: [
+      {
+        title: 'Official',
+        items: [
+          'Google DeepMind',
+          'Google AI Blog',
+          'Microsoft Research Blog',
+          'OpenAI Newsroom via RSSHub + official fallback',
+          'Anthropic News via RSSHub + official fallback',
+        ],
+      },
+      {
+        title: 'Academic / Research',
+        items: [
+          'Hugging Face Blog',
+          'Nielsen Norman Group',
+          'Alignment Forum',
+          'PaperWeekly',
+          'vLLM Blog',
+        ],
+      },
+      {
+        title: 'Media',
+        items: [
+          'The Verge AI',
+          'MIT Technology Review',
+          'TechCrunch AI',
+          'VentureBeat AI',
+          'Wired AI',
+          'Ars Technica AI',
+        ],
+      },
+      {
+        title: 'Personal / Analysis',
+        items: [
+          'Import AI',
+          'AI Snake Oil',
+          'Simon Willison',
+          'Stratechery',
+        ],
+      },
+    ],
+    architecture: [
+      {
+        title: 'Signal Layer',
+        description: 'Collect and normalize RSS, Atom, and official-page signals into a structured feed.',
+      },
+      {
+        title: 'Judgment Layer',
+        description: 'Score and classify items as observe, update, or shift instead of forcing every signal into a strong claim.',
+      },
+      {
+        title: 'Topic Layer',
+        description: 'Group multiple signals into long-running topics such as generative UI, AI search interfaces, or human-AI trust.',
+      },
+      {
+        title: 'Framework Layer',
+        description: 'Promote repeated structural shifts into durable design principles and long-term methods.',
+      },
+    ],
+  },
 };
 
-export default function ProjectPage() {
-  const params = useParams();
-  const slug = params.slug as string;
+export function generateStaticParams() {
+  return Object.keys(projects).map((slug) => ({ slug }));
+}
+
+export default async function ProjectPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
   const project = projects[slug];
 
   if (!project) {
@@ -183,6 +281,22 @@ export default function ProjectPage() {
 
           {/* Content Sections */}
           <div className="space-y-12">
+            {/* Intro */}
+            {project.intro_en && (
+              <section className="border-l-2 border-amber-warm pl-6">
+                <h2 className="font-[family-name:var(--font-pixel)] text-[12px] text-amber-warm mb-4">
+                  000 // PROJECT OVERVIEW
+                </h2>
+                <p
+                  className="font-[family-name:var(--font-body)] text-text-secondary leading-relaxed"
+                  data-en={project.intro_en}
+                  data-zh={project.intro_zh}
+                >
+                  {project.intro_en}
+                </p>
+              </section>
+            )}
+
             {/* Challenge */}
             <section className="border-l-2 border-red-primary pl-6">
               <h2 className="font-[family-name:var(--font-pixel)] text-[12px] text-red-primary mb-4">
@@ -244,6 +358,68 @@ export default function ProjectPage() {
                 ))}
               </ul>
             </section>
+
+            {/* Confirmed Sources */}
+            {project.sourceGroups && (
+              <section className="border-l-2 border-cyan-retro pl-6">
+                <h2 className="font-[family-name:var(--font-pixel)] text-[12px] text-cyan-retro mb-4">
+                  005 // CONFIRMED SOURCES
+                </h2>
+                <p className="font-[family-name:var(--font-body)] text-text-secondary leading-relaxed mb-6">
+                  Initial information pool confirmed from the current ingest pipeline. The system mixes official, academic, media, and personal-analysis sources so judgments are not based on a single information surface.
+                </p>
+                <div className="grid gap-4 md:grid-cols-2">
+                  {project.sourceGroups.map((group) => (
+                    <div
+                      key={group.title}
+                      className="bg-bg-secondary border border-line-pixel p-4"
+                    >
+                      <h3 className="font-[family-name:var(--font-pixel)] text-[10px] text-cyan-retro mb-3">
+                        {group.title}
+                      </h3>
+                      <ul className="space-y-2">
+                        {group.items.map((item) => (
+                          <li
+                            key={item}
+                            className="font-[family-name:var(--font-mono)] text-[length:var(--text-xs)] text-text-secondary"
+                          >
+                            <span className="text-cyan-retro mr-2">▸</span>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {/* Architecture */}
+            {project.architecture && (
+              <section className="border-l-2 border-amber-warm pl-6">
+                <h2 className="font-[family-name:var(--font-pixel)] text-[12px] text-amber-warm mb-4">
+                  006 // WEBSITE FRAMEWORK
+                </h2>
+                <div className="grid gap-4 md:grid-cols-2">
+                  {project.architecture.map((layer, index) => (
+                    <article
+                      key={layer.title}
+                      className="bg-bg-secondary border border-line-pixel p-4"
+                    >
+                      <p className="font-[family-name:var(--font-pixel)] text-[10px] text-amber-warm mb-2">
+                        LAYER_{String(index + 1).padStart(2, '0')}
+                      </p>
+                      <h3 className="font-[family-name:var(--font-display)] text-[length:var(--text-base)] text-text-primary mb-2">
+                        {layer.title}
+                      </h3>
+                      <p className="font-[family-name:var(--font-body)] text-[length:var(--text-sm)] text-text-secondary leading-relaxed">
+                        {layer.description}
+                      </p>
+                    </article>
+                  ))}
+                </div>
+              </section>
+            )}
           </div>
 
           {/* Navigation */}

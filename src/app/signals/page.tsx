@@ -70,7 +70,7 @@ export default function SignalsArchive() {
                 006
               </span>
               <span className="text-text-tertiary font-[family-name:var(--font-pixel)] text-[20px]">
-                //
+                {'//'}
               </span>
               <h1
                 className="font-[family-name:var(--font-pixel)] text-[20px] text-text-primary tracking-wider"

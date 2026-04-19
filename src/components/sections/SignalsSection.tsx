@@ -50,7 +50,7 @@ export default function SignalsSection() {
             006
           </span>
           <span className="text-text-tertiary font-[family-name:var(--font-pixel)] text-[16px]">
-            //
+            {'//'}
           </span>
           <h2
             className="font-[family-name:var(--font-pixel)] text-[16px] text-text-primary tracking-wider"
