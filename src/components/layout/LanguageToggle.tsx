@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, createContext, useContext, useSyncExternalStore } from 'react';
+import { useEffect, useState, createContext, useContext } from 'react';
 import clsx from 'clsx';
 import {
   LANGUAGE_STORAGE_KEY,
@@ -31,8 +31,21 @@ function applyLanguageToDocument(lang: 'en' | 'zh') {
     }
 
     const nextText = lang === 'zh' ? element.dataset.zh : element.dataset.en;
-    if (typeof nextText === 'string' && element.textContent !== nextText) {
-      element.textContent = nextText;
+    if (typeof nextText !== 'string' || element.textContent === nextText) return;
+
+    // Find and update only the first text node — do NOT use textContent= which
+    // destroys all child nodes (including React-owned DOM nodes) and breaks hydration.
+    let updated = false;
+    for (const node of Array.from(element.childNodes)) {
+      if (node.nodeType === Node.TEXT_NODE) {
+        node.nodeValue = nextText;
+        updated = true;
+        break;
+      }
+    }
+    // Fallback: no text node found, create one (element was empty)
+    if (!updated) {
+      element.insertBefore(document.createTextNode(nextText), element.firstChild);
     }
   });
 }
@@ -74,15 +87,20 @@ function getServerLanguageSnapshot(): 'en' | 'zh' {
 }
 
 export default function LanguageToggle({ className }: LanguageToggleProps) {
-  const lang = useSyncExternalStore(
-    subscribeToLanguage,
-    getClientLanguageSnapshot,
-    getServerLanguageSnapshot
-  );
+  const [lang, setLang] = useState<'en' | 'zh'>('en');
 
   useEffect(() => {
-    applyLanguageToDocument(lang);
-  }, [lang]);
+    const clientLang = getClientLanguageSnapshot();
+    setLang(clientLang);
+    applyLanguageToDocument(clientLang);
+
+    const unsubscribe = subscribeToLanguage(() => {
+      const updated = getClientLanguageSnapshot();
+      setLang(updated);
+      applyLanguageToDocument(updated);
+    });
+    return unsubscribe;
+  }, []);
 
   const switchLanguage = (newLang: 'en' | 'zh') => {
     localStorage.setItem(LANGUAGE_STORAGE_KEY, newLang);
@@ -90,8 +108,6 @@ export default function LanguageToggle({ className }: LanguageToggleProps) {
     window.dispatchEvent(new Event(LANGUAGE_EVENT));
     applyLanguageToDocument(newLang);
   };
-
-  const currentLang = lang;
 
   return (
     <div
@@ -108,12 +124,12 @@ export default function LanguageToggle({ className }: LanguageToggleProps) {
           'px-2 py-1',
           'border border-line-pixel',
           'transition-all duration-[var(--duration-fast)]',
-          currentLang === 'en'
+          lang === 'en'
             ? 'bg-red-primary text-bg-primary border-red-primary'
             : 'bg-transparent text-text-tertiary hover:text-red-bright hover:border-red-bright'
         )}
         aria-label="Switch to English"
-        aria-pressed={currentLang === 'en'}
+        aria-pressed={lang === 'en'}
       >
         EN
       </button>
@@ -124,12 +140,12 @@ export default function LanguageToggle({ className }: LanguageToggleProps) {
           'px-2 py-1',
           'border border-line-pixel',
           'transition-all duration-[var(--duration-fast)]',
-          currentLang === 'zh'
+          lang === 'zh'
             ? 'bg-red-primary text-bg-primary border-red-primary'
             : 'bg-transparent text-text-tertiary hover:text-red-bright hover:border-red-bright'
         )}
         aria-label="切换到中文"
-        aria-pressed={currentLang === 'zh'}
+        aria-pressed={lang === 'zh'}
       >
         中文
       </button>

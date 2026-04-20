@@ -38,7 +38,6 @@ export function buildLanguageBootstrapScript() {
     var storageKey = ${JSON.stringify(LANGUAGE_STORAGE_KEY)};
     var cookieKey = ${JSON.stringify(LANGUAGE_COOKIE_KEY)};
     var lang = localStorage.getItem(storageKey);
-    var observerKey = '__preferredLanguageObserver';
 
     if (lang !== 'zh' && lang !== 'en') {
       var cookieMatch = document.cookie.match(new RegExp('(?:^|;\\\\s*)' + cookieKey + '=([^;]+)'));
@@ -55,44 +54,6 @@ export function buildLanguageBootstrapScript() {
     document.cookie = cookieKey + '=' + encodeURIComponent(lang) + '; path=/; max-age=31536000; samesite=lax';
     document.documentElement.lang = lang;
     document.documentElement.setAttribute('data-lang', lang);
-
-    var applyLanguage = function () {
-      var elements = document.querySelectorAll('[data-en][data-zh]');
-      for (var i = 0; i < elements.length; i++) {
-        var element = elements[i];
-        if (element.querySelector('[data-en][data-zh]')) {
-          continue;
-        }
-
-        var nextText = lang === 'zh' ? element.getAttribute('data-zh') : element.getAttribute('data-en');
-        if (typeof nextText === 'string' && element.textContent !== nextText) {
-          element.textContent = nextText;
-        }
-      }
-    };
-
-    applyLanguage();
-
-    if (window[observerKey] && typeof window[observerKey].disconnect === 'function') {
-      window[observerKey].disconnect();
-    }
-
-    var scheduled = false;
-    var observer = new MutationObserver(function () {
-      if (scheduled) return;
-      scheduled = true;
-      requestAnimationFrame(function () {
-        scheduled = false;
-        applyLanguage();
-      });
-    });
-
-    observer.observe(document.body || document.documentElement, {
-      childList: true,
-      subtree: true,
-    });
-
-    window[observerKey] = observer;
   } catch (error) {}
 })();
 `;

@@ -1,13 +1,8 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-
-// Dynamic import canvas to avoid SSR
-const ProjectVisual = dynamic(
-  () => import('../canvas/ProjectVisual'),
-  { ssr: false }
-);
+import ProjectVisual from '../canvas/ProjectVisual';
 
 interface Project {
   id: string;
@@ -80,6 +75,9 @@ const projects: Project[] = [
 ];
 
 export default function ProjectsSection() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   return (
     <section id="projects" className="py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-6">
@@ -121,7 +119,7 @@ export default function ProjectsSection() {
               {/* Project Preview - Animated Canvas */}
               <div className="aspect-video bg-bg-terminal border-b-2 border-line-pixel relative overflow-hidden">
                 {/* Animated Visual */}
-                <ProjectVisual seed={project.seed} />
+                {mounted && <ProjectVisual seed={project.seed} />}
 
                 {/* Project ID Overlay */}
                 <div className="absolute top-3 left-3 bg-bg-terminal/80 px-2 py-1 border border-line-pixel">

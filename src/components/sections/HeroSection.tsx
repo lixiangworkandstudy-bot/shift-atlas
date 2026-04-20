@@ -1,14 +1,8 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import dynamic from 'next/dynamic';
 import { PixelButton } from '../pixel';
-
-// Dynamic import canvas to avoid SSR
-const PixelHeroCanvas = dynamic(
-  () => import('../canvas/PixelHeroCanvas'),
-  { ssr: false }
-);
+import PixelHeroCanvas from '../canvas/PixelHeroCanvas';
 
 export default function HeroSection() {
   const [displayText, setDisplayText] = useState('');
@@ -144,7 +138,7 @@ export default function HeroSection() {
                 <div className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2 border-red-primary z-10" />
 
                 {/* Animated Canvas - client only */}
-                <PixelHeroCanvas />
+                {mounted && <PixelHeroCanvas />}
               </div>
             </div>
           </div>
